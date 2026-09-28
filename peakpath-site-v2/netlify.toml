@@ -1,0 +1,7 @@
+# Netlify 會讀這個檔案：每次 GitHub 有更新，就執行建置並發布 dist 資料夾
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
