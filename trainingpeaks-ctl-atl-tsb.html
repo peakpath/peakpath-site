@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看懂 TrainingPeaks 的體能曲線：CTL、ATL、TSB 到底在說什麼？｜PeakPath Coaching 峰行訓練</title>
+<meta name="description" content="用最白話的方式拆解 TrainingPeaks 的 CTL（體能）、ATL（疲勞）與 TSB（狀態）怎麼算出來、各自代表什麼，以及排課時怎麼用這三個數字判斷該加量、休息，還是準備比賽。">
+<meta property="og:title" content="看懂 TrainingPeaks 的體能曲線：CTL、ATL、TSB 到底在說什麼？">
+<meta property="og:description" content="三條線、一個數字，決定你該加量、該休息，還是該去比賽。">
+<meta property="og:image" content="../../assets/img/hero.jpg">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" href="../../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body data-root="../../" data-page="blog" data-slug="trainingpeaks-ctl-atl-tsb">
+
+<header class="article-head">
+  <div class="article-wrap">
+    <div class="crumbs"><a href="../index.html">文章</a> ／ <span id="a-cat"></span></div>
+    <!-- 範例草稿：確認內容、改成你自己的語氣後，把下面這一行刪掉再上傳 -->
+    <p style="margin-bottom:14px;"><span class="placeholder-tag" style="margin-left:0;">範例草稿・發布前請修改</span></p>
+    <h1>看懂 TrainingPeaks 的體能曲線：CTL、ATL、TSB 到底在說什麼？</h1>
+    <p class="dek">三條線、一個數字，決定你該加量、該休息，還是該去比賽。</p>
+    <div class="byline">
+      <img src="../../assets/img/coach.jpg" alt="楊博智">
+      <div><strong>楊博智 Po Chih Yang</strong><span id="a-date"></span></div>
+    </div>
+  </div>
+</header>
+
+<main class="article-wrap">
+  <article class="article-body">
+    <p>打開 TrainingPeaks 的 Performance Management Chart（PMC），藍色、粉紅、黃色三條線交錯在一起。很多選手每天都會點進去看，但被問到「你現在的 TSB 是負 20，這代表什麼？」時，常常答不太出來。</p>
+    <p>這三條線其實只在回答三個問題：<strong>你累積了多少體能？你最近有多累？你今天適不適合拚？</strong>看懂它們，你就能分辨「現在的累是在變強」還是「現在的累是在受傷邊緣」。</p>
+
+    <nav class="toc">
+      <b>這篇會談到</b>
+      <ol>
+        <li><a href="#tss">一切的起點：TSS 是什麼</a></li>
+        <li><a href="#ctl">CTL：藍線，你的體能存款</a></li>
+        <li><a href="#atl">ATL：粉紅線，你最近的疲勞</a></li>
+        <li><a href="#tsb">TSB：黃線，你今天的狀態</a></li>
+        <li><a href="#use">排課時怎麼用這三個數字</a></li>
+        <li><a href="#trap">三個最常見的誤讀</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="tss">一切的起點：TSS 是什麼</h2>
+    <p>三條線都是從同一個數字算出來的：<strong>TSS（Training Stress Score，訓練壓力分數）</strong>。它把一堂課的「強度」和「時間」合成一個分數，讓游泳、騎車、跑步可以放在同一把尺上比較。</p>
+    <p>定義很直覺：<strong>用你的閾值強度（例如 FTP）騎滿 1 小時，就是 100 TSS。</strong>強度低一點、時間長一點，分數可能差不多；強度高、時間短，也可能一樣。</p>
+    <div class="callout"><b>記住這件事：</b>TSS 是拿你的表現「除以」你設定的閾值算出來的。FTP、閾值配速或閾值心率設錯，TSS 就會跟著錯，後面三條線也全部一起歪掉，而且系統不會提醒你。</div>
+
+    <h2 id="ctl">CTL：藍線，你的體能存款</h2>
+    <p><strong>CTL（Chronic Training Load，長期訓練負荷）</strong>，在 TrainingPeaks 上叫做 Fitness。它大約是你過去 42 天每日 TSS 的加權平均，越近期的訓練權重越高。</p>
+    <p>你可以把它想成<strong>體能存款</strong>：每天練習就是存一點錢進去，存款會慢慢長大；停練幾天，存款也只會慢慢減少。因為時間尺度長，CTL 上升得很慢，這也是為什麼體能沒辦法在賽前兩週「補」回來。</p>
+    <ul>
+      <li>CTL 高，代表你這段時間穩定地消化了比較大的訓練量。</li>
+      <li>CTL 本身<strong>不等於速度</strong>。它說的是「你能承受多少訓練」，不是「你比賽會多快」。</li>
+    </ul>
+
+    <h2 id="atl">ATL：粉紅線，你最近的疲勞</h2>
+    <p><strong>ATL（Acute Training Load，短期訓練負荷）</strong>，也就是 Fatigue，大約是過去 7 天每日 TSS 的加權平均。</p>
+    <p>它的反應很快：一個大週末就能讓 ATL 衝上去，休息兩三天它又會掉下來。所以粉紅線總是比藍線跳動得劇烈，這是正常的。</p>
+
+    <h2 id="tsb">TSB：黃線，你今天的狀態</h2>
+    <p><strong>TSB（Training Stress Balance）</strong>，也就是 Form，算法很簡單：</p>
+    <blockquote>TSB ＝ 昨天的 CTL － 昨天的 ATL</blockquote>
+    <p>體能存款減掉最近的疲勞，剩下的就是你「今天能拿出來用」的狀態。</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>TSB 大約落在</th><th>代表的狀態</th><th>適合做什麼</th></tr></thead>
+        <tbody>
+          <tr><td>明顯正值</td><td>很新鮮、疲勞已退</td><td>比賽、測驗；太久維持在這裡體能會慢慢流失</td></tr>
+          <tr><td>0 附近</td><td>維持、小幅恢復</td><td>恢復週、一般訓練</td></tr>
+          <tr><td>小幅負值</td><td>有累積疲勞，正在變強</td><td>大多數的訓練期都落在這個區間</td></tr>
+          <tr><td>很深的負值</td><td>疲勞遠大於體能</td><td>只能短期存在，要安排恢復，否則受傷與過度訓練風險升高</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>具體的數字每個人差很多，要跟自己過去的紀錄比，而不是跟別人比。同樣是 −25，有人練得很好，有人已經撐不住。</p>
+
+    <h2 id="use">排課時怎麼用這三個數字</h2>
+    <h3>1. 看 CTL 的上升速度，不只看高度</h3>
+    <p>CTL 每週爬升太快，是受傷與生病最常見的前兆之一。常見的參考是每週增加幾分、穩定地往上走；如果連續好幾週都陡升，就算身體暫時撐得住，也該安排一個恢復週。</p>
+    <h3>2. 用 TSB 規劃恢復週與賽前減量</h3>
+    <p>訓練期的 TSB 通常會維持在負值。恢復週的目的是讓 TSB 回到 0 附近，讓身體把前幾週的訓練「吸收」成體能。賽前減量則是讓 TSB 轉成正值，同時盡量不讓 CTL 掉太多：<strong>減的是量，強度要保留。</strong></p>
+    <h3>3. 比賽日的 TSB 不是越高越好</h3>
+    <p>減量太久，TSB 很漂亮，但 CTL 也一起掉下來，等於帶著比較少的存款上場。短距離比賽可以接受比較短的減量；226 這種長距離，通常需要更長的減量期，但仍然要在「新鮮」和「體能」之間取得平衡。</p>
+
+    <h2 id="trap">三個最常見的誤讀</h2>
+    <ol>
+      <li><strong>「CTL 越高我就越強」</strong>：CTL 是訓練量的指標，不是成績的保證。練了很多低品質的量，CTL 也會很高。</li>
+      <li><strong>「三項的 TSS 可以直接相加比較」</strong>：100 TSS 的跑步和 100 TSS 的騎車，對身體的衝擊並不一樣，跑步的肌肉損傷通常更大。看總量時，也要回頭看各項目的分布。</li>
+      <li><strong>「閾值很久沒更新也沒關係」</strong>：這是最常見也最隱形的問題。閾值偏低，TSS 就會被高估，你會以為自己練得很多，其實只是尺量錯了。</li>
+    </ol>
+
+    <h2>結論</h2>
+    <p>PMC 不是用來每天盯著分數的，而是用來回答「接下來該怎麼安排」。<strong>CTL 看方向、ATL 看最近、TSB 看今天。</strong>先確認你的閾值設定是準的，這三條線才會說真話。</p>
+  </article>
+
+  <aside class="article-cta">
+    <h3>想要一份照你生活安排的課表？</h3>
+    <p>一對一線上教練會依你的工作時間、目標賽事與恢復狀況調整每週課表；如果想先自己練，也可以從現成的訓練課表開始。</p>
+    <div class="row">
+      <a class="btn" href="https://docs.google.com/forms/d/1OIfbL7VuoSGEuI7I7qRtSjhvsJowcaMKTRpmMSym7cA/edit?usp=drive_web&ouid=100801459121245555120" target="_blank" rel="noopener">預約免費諮詢</a>
+      <a class="btn btn-ghost" href="../../plans/index.html">看訓練課表</a>
+    </div>
+  </aside>
+</main>
+
+<section class="related" data-hide-if-empty style="border-bottom:none;">
+  <div class="wrap">
+    <h2>延伸閱讀</h2>
+    <div class="teaser-grid" id="related-list"></div>
+  </div>
+</section>
+
+<script src="../../assets/posts.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
