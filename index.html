@@ -3,42 +3,423 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>訓練文章｜PeakPath Coaching 峰行訓練</title>
-<meta name="description" content="楊博智教練的訓練文章：鐵人三項、跑步、自行車的訓練知識、比賽紀錄與數據分析，把運動科學拆成練得出來的方法。">
-<meta property="og:title" content="訓練文章｜PeakPath Coaching 峰行訓練">
-<meta property="og:description" content="鐵人三項、跑步、自行車的訓練知識、比賽紀錄與數據分析。">
-<meta property="og:image" content="../assets/img/hero.jpg">
+<title>峰行訓練｜個別化耐力運動顧問</title>
+<meta name="description" content="PeakPath Coaching 峰行訓練——楊博智教練，World Triathlon 與 TrainingPeaks 雙認證。鐵人三項、跑步與自行車的一對一線上教練、現成訓練課表與訓練文章。">
+<meta property="og:title" content="峰行訓練｜PeakPath Coaching">
+<meta property="og:description" content="專心訓練，放心比賽，好好生活。一對一線上教練、訓練課表與訓練文章。">
+<meta property="og:image" content="assets/img/hero.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-root="../" data-page="blog">
+<body data-root="" data-page="home">
 
-<header class="page-hero">
-  <div class="wrap" style="position:relative;">
-    <span class="eyebrow" data-i18n="bl_eyebrow">Training Insights</span>
-    <h1 data-i18n="bl_h1">訓練文章</h1>
-    <p data-i18n="bl_p">把運動科學拆成看得懂、練得出來的方法。從鐵人三項、跑步到數據分析，寫給想把有限時間練在刀口上的你。</p>
-    <p data-i18n="zh_only" style="margin-top:12px;font-size:14px;color:var(--paper-faint);"></p>
-  </div>
-</header>
-
-<section style="border-bottom:none;padding-top:56px;">
-  <div class="wrap">
-    <div class="filter-row" id="filter-row"></div>
-    <div class="post-list" id="post-list"></div>
-
-    <div class="subscribe">
-      <div>
-        <h3 data-i18n="sub_h"></h3>
-        <p data-i18n="sub_p"></p>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker" data-i18n="hero_kicker">PEAKPATH COACHING</span>
+      <h1 data-i18n="hero_h1">專心訓練，放心比賽，好好生活。</h1>
+      <p class="lede" data-i18n="hero_lede">不受時間、區域限制，打造個別化專屬的訓練計劃。</p>
+      <div class="hero-ctas">
+        <a href="https://docs.google.com/forms/d/1OIfbL7VuoSGEuI7I7qRtSjhvsJowcaMKTRpmMSym7cA/edit?usp=drive_web&ouid=100801459121245555120" target="_blank" rel="noopener" class="btn" data-i18n="hero_cta1">預約免費教練諮詢</a>
+        <a href="#coaching" class="btn btn-ghost" data-i18n="hero_cta2">了解合作方式</a>
       </div>
-      <div class="actions">
-        <a class="btn" href="https://lin.ee/s2tEhvs" target="_blank" rel="noopener" data-i18n="sub_btn"></a>
-        <small data-i18n="sub_note"></small>
+      <ul class="cred-list">
+        <li data-i18n="cred1">TrainingPeaks Level 2 認證教練</li>
+        <li data-i18n="cred2">World Triathlon Level 1 認證教練</li>
+        <li data-i18n="cred3">提供中文與英文教練服務</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/img/hero.jpg" alt="PeakPath Coaching — race finish" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:52px;">
+      <span class="eyebrow" data-i18n="why_eyebrow">我為什麼做教練</span>
+      <h2 data-i18n="why_h2">十年淬鍊出的，不只是成績，是一套訓練哲學。</h2>
+      <p data-i18n="why_intro">我從來不是天賦型選手。能走到今天，靠的是始終如一的堅持，以及科學化、週期化的訓練方法——這是我十年來的訓練軌跡。</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl1_year">學生時期</span>
+          <h3 data-i18n="tl1_title">田徑起點，成績平平</h3>
+          <p data-i18n="tl1_desc">大學以前練田徑，成績並不出色，也不是天賦型選手。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl2_year">大學</span>
+          <h3 data-i18n="tl2_title">接觸鐵人三項，認識科學化訓練</h3>
+          <p data-i18n="tl2_desc">開始接觸鐵人三項與週期化訓練觀念，第一次真正看見自己的轉變，先從奧運距離（51.5）比起。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl3_year">2018–至今</span>
+          <h3 data-i18n="tl3_title">數年113淬鍊：4:44 → 4:13</h3>
+          <p data-i18n="tl3_desc">發現游泳實力落差過大，大三轉戰70.3（113），沒想到一比就是六年，成績開始持續進步。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl4_year">2024</span>
+          <h3 data-i18n="tl4_title">站上IM 70.3世錦賽</h3>
+          <p data-i18n="tl4_desc">於紐西蘭陶泊，站上IRONMAN 70.3世界錦標賽的起跑線。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl5_year">2023–2024</span>
+          <h3 data-i18n="tl5_title">挑戰226超級鐵人</h3>
+          <p data-i18n="tl5_desc">2023年底跑出初馬2小時41分作為前導，隔年完成人生第一場226，成績9小時30分。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl6_year">2025</span>
+          <h3 data-i18n="tl6_title">226進步到9:05，拿下雙料佳績</h3>
+          <p data-i18n="tl6_desc">226最佳成績進步到9小時05分，在Challenge Taiwan 226K奪下總冠軍（9:15），同年於Formosa Xtreme Triathlon獲得第四名。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span class="dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-year" data-i18n="tl7_year">2026</span>
+          <h3 data-i18n="tl7_title">IRONMAN Taiwan奪冠，前進KONA</h3>
+          <p data-i18n="tl7_desc">拿下IRONMAN Taiwan總冠軍，今年十月即將站上KONA世界錦標賽的起跑線。</p>
+        </div>
+      </div>
+    </div>
+    <p class="why-closing" data-i18n="why_closing">這段路讓我更確定一件事：天賦、條件從來不是關鍵，真正重要的是能否周而復始地投入、並用對的方法訓練。我的教練理念也建立在這裡——不是給你一份「看起來很厲害」的課表，而是找到一個結合科學化、週期化並且可執行的訓練規劃，幫助你在忙碌的生活裡，依然能穩定進步、走得長久。</p>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num" data-i18n="stat1_num">10+</div>
+        <div class="stat-label" data-i18n="stat1_label">年執教與競賽經歷</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-i18n="stat2_num">雙認證</div>
+        <div class="stat-label" data-i18n="stat2_label">World Triathlon + TrainingPeaks</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-i18n="stat3_num">2026</div>
+        <div class="stat-label" data-i18n="stat3_label">IRONMAN Taiwan 總冠軍</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-i18n="stat4_num">KONA</div>
+        <div class="stat-label" data-i18n="stat4_label">世界錦標賽資格</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="fit_eyebrow">適合對象</span>
+      <h2 data-i18n="fit_h2">什麼樣的選手適合找 PeakPath Coaching？</h2>
+      <p data-i18n="fit_sub">適合在工作與生活責任之間仍堅持訓練的選手，你正需要一份能配合真實生活的訓練計畫。</p>
+    </div>
+    <ul class="fit-list">
+      <li data-i18n="fit1">有明確的比賽目標，但不知道如何把訓練放進日常生活</li>
+      <li data-i18n="fit2">已經很努力訓練，卻常因疲勞或缺乏結構而無法穩定進步</li>
+      <li data-i18n="fit3">想了解自己的訓練反應，而不只是照表操課</li>
+      <li data-i18n="fit4">需要一位願意根據實際狀況調整課表、給予訓練更明確、俐落的教練</li>
+    </ul>
+  </div>
+</section>
+
+<section id="coaching">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="how_eyebrow">合作方式</span>
+      <h2 data-i18n="how_h2">線上鐵人三項教練是怎麼運作的？</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 data-i18n="how1_h">先了解你的生活，再安排訓練</h3>
+        <p data-i18n="how1_p">先進行免費諮詢，了解你的工作時間、訓練經歷、器材與比賽目標，並完成一週的試合作訓練，再由你決定是否接續合作。諮詢過程無任何綁定、無需付費。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 data-i18n="how2_h">課表隨你的狀態持續調整</h3>
+        <p data-i18n="how2_p">透過 TrainingPeaks 檢視完成度、心率與配速，根據恢復狀況，並搭配每月線上會議，密切且動態地依生活變化調整未來的訓練安排。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 data-i18n="how3_h">不只練體能，也準備比賽當天</h3>
+        <p data-i18n="how3_p">提供競賽配速、補給、轉換區等相關實務競賽策略，減少比賽失誤、提升運動表現。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="tp_eyebrow">以 TrainingPeaks 驅動</span>
+      <h2 data-i18n="tp_h2">數據為核心的訓練系統，更需要實務經歷判斷</h2>
+    </div>
+    <div class="tp-box">
+      <div>
+        <p style="color:var(--paper-dim);font-size:16px;" data-i18n="tp_p">TrainingPeaks 是我用來規劃、追蹤每一份課表的系統，讓訓練不只是憑感覺。從你完成的每一次游泳、單車、跑步，到心率、配速與恢復狀態，都會回饋進下一步的調整裡。</p>
+        <ul class="tp-features">
+          <li data-i18n="tp_f1">課表設計 — 每份訓練都有清楚的強度、配速與心率區間，讓訓練明確不猶疑</li>
+          <li data-i18n="tp_f2">動態追蹤 — 每次上傳的數據皆親自檢視並調整、給予回饋</li>
+          <li data-i18n="tp_f3">長期趨勢分析 — 從每日訓練中看出整個賽季的體能變化</li>
+          <li data-i18n="tp_f4">即時回饋 — 訊息文字溝通、每月視訊會議，密切聯繫訓練動向</li>
+        </ul>
+      </div>
+      <a href="https://www.trainingpeaks.com/coach/my-profile/preview#bio" target="_blank" rel="noopener" class="tp-profile-link">
+        <div class="tp-profile-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="#c69a54" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3h6v6M10 14L21 3" stroke="#c69a54" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="tp-profile-title" data-i18n="tp_profile_cta">查看我的教練檔案</div>
+        <div class="tp-profile-sub"><span data-i18n="tp_profile_sub">TrainingPeaks 官方檔案</span> <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="price_eyebrow">一對一線上教練</span>
+      <h2 data-i18n="price_h2">從你的生活出發，設計真正能執行的訓練</h2>
+      <p data-i18n="price_sub">所有方案均包含 TrainingPeaks 帳號及免費初次諮詢。</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan featured">
+        <span class="tag" data-i18n="plan1_tag">最受歡迎</span>
+        <div class="plan-name" data-i18n="plan1_name">鐵人三項訓練方案</div>
+        <div class="plan-price" data-i18n="plan1_price">NT$5,500</div>
+        <span class="plan-unit" data-i18n="plan1_unit">/ 月</span>
+        <span class="plan-note" data-i18n="plan_note">學生價格、長期優惠方案請詳閱內文</span>
+        <p class="plan-desc" data-i18n="plan1_desc">完整鐵人三項週期化訓練，整合游泳、自行車、跑步三項規劃，適合準備標鐵、70.3 或 226 各級距離賽事的選手。</p>
+        <ul class="plan-features">
+          <li data-i18n="plan1_f1">個人化週期訓練計畫</li>
+          <li data-i18n="plan1_f2">每週訓練內容更新與動態調整</li>
+          <li data-i18n="plan1_f3">TrainingPeaks 數據追蹤與回饋</li>
+          <li data-i18n="plan1_f4">每月例行線上會議</li>
+          <li data-i18n="plan1_f5">比賽配速與補給策略規劃</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/1OIfbL7VuoSGEuI7I7qRtSjhvsJowcaMKTRpmMSym7cA/edit?usp=drive_web&ouid=100801459121245555120" target="_blank" rel="noopener" class="btn" data-i18n="plan_cta2">預約方案諮詢</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name" data-i18n="plan2_name">單項目訓練方案</div>
+        <div class="plan-price" data-i18n="plan2_price">NT$4,000</div>
+        <span class="plan-unit" data-i18n="plan1_unit">/ 月</span>
+        <span class="plan-note" data-i18n="plan_note">學生價格、長期優惠方案請詳閱內文</span>
+        <p class="plan-desc" data-i18n="plan2_desc">游泳、自行車、跑步任單項訓練規劃，適合準備馬拉松、路跑或自行車賽事之選手。</p>
+        <ul class="plan-features">
+          <li data-i18n="plan2_f1">個人化週期訓練計畫</li>
+          <li data-i18n="plan2_f2">每週訓練內容更新與動態調整</li>
+          <li data-i18n="plan2_f3">TrainingPeaks 數據追蹤與回饋</li>
+          <li data-i18n="plan2_f4">每月例行線上會議</li>
+          <li data-i18n="plan2_f5">比賽配速與補給策略規劃</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-i18n="plan_cta">了解方案</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name" data-i18n="plan3_name">企業團體、運動社團相關</div>
+        <div class="plan-price" data-i18n="plan3_price">另議報價</div>
+        <p class="plan-desc" data-i18n="plan3_desc" style="margin-top:18px;">為企業、運動社團設計的主題演講、工作坊與團體訓練方案。</p>
+        <ul class="plan-features">
+          <li data-i18n="plan3_f1">主題式講座</li>
+          <li data-i18n="plan3_f2">企業、社團工作坊、客座教練</li>
+          <li data-i18n="plan3_f3">賽事規劃、團體訓練規劃</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-i18n="plan3_cta">洽詢報價</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plans-home" data-hide-if-empty>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="plans_eyebrow">現成訓練課表</span>
+      <h2 data-i18n="plans_h2">還不需要一對一教練？先從一份完整課表開始</h2>
+      <p data-i18n="plans_sub">以同樣的週期化邏輯設計，一次購買、直接匯入 TrainingPeaks，照著練就能準備好你的目標賽事。</p>
+    </div>
+    <div class="plans-grid" id="plans-teaser"></div>
+    <div class="teaser-foot"><a class="text-link" href="plans/index.html" data-i18n="plans_all">看全部訓練課表 →</a></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="corp_eyebrow">更多合作方式</span>
+      <h2 data-i18n="corp_h2">為企業、社團與團體設計的方案</h2>
+      <p data-i18n="corp_sub">每一項合作都可依參與對象、人數、期間與需求進行調整。</p>
+    </div>
+    <div class="corp-grid">
+      <div class="corp-card">
+        <h3 data-i18n="corp1_h">企業演講與工作坊</h3>
+        <p data-i18n="corp1_p">結合耐力運動與真實職涯經驗，分享能實際運用在工作與生活中的方法。</p>
+        <ul>
+          <li data-i18n="corp1_l1">目標執行與時間管理</li>
+          <li data-i18n="corp1_l2">紀律與長期穩定表現</li>
+          <li data-i18n="corp1_l3">面對挫折時的心態調整</li>
+        </ul>
+        <a href="#contact" data-i18n="corp1_cta">詢問企業演講方案 →</a>
+      </div>
+      <div class="corp-card">
+        <h3 data-i18n="corp2_h">企業運動社團教練</h3>
+        <p data-i18n="corp2_p">協助企業建立有系統的三鐵、跑步或耐力運動社團文化。</p>
+        <ul>
+          <li data-i18n="corp2_l1">成員能力與目標評估</li>
+          <li data-i18n="corp2_l2">賽季訓練規劃</li>
+          <li data-i18n="corp2_l3">團體訓練與知識課程</li>
+        </ul>
+        <a href="#contact" data-i18n="corp2_cta">討論企業社團方案 →</a>
+      </div>
+      <div class="corp-card">
+        <h3 data-i18n="corp3_h">團體訓練計畫</h3>
+        <p data-i18n="corp3_p">為準備相同賽事的小型團體，設計結構化訓練計畫。</p>
+        <ul>
+          <li data-i18n="corp3_l1">適合跑團、車隊、三鐵社團</li>
+          <li data-i18n="corp3_l2">共享訓練方向、依能力調整強度</li>
+          <li data-i18n="corp3_l3">賽前策略與知識課程</li>
+        </ul>
+        <a href="#contact" data-i18n="corp3_cta">詢問團體訓練方案 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap bio-grid">
+    <div class="about-photo" style="aspect-ratio:3/4;overflow:hidden;padding:0;"><img src="assets/img/coach.jpg" alt="Coach portrait" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <div class="bio-copy">
+      <span class="eyebrow" data-i18n="bio_eyebrow">關於你的教練</span>
+      <h2 style="font-size:28px;margin-bottom:20px;" data-i18n="bio_h2">楊博智 Po Chih Yang</h2>
+      <div class="quote" data-i18n="bio_quote">「對行動心急如焚，對成果耐心等待。」</div>
+      <p data-i18n="bio_p1">比賽需要想像力，練習則要有理性和現實，在兩者之間需要睡覺。</p>
+      <p data-i18n="bio_p2">人們想複製仙丹課表、冠軍做法，可惜的是，世界裡根本不存在所謂的SOP，人會變，經驗無法被複製，我們要做的是，找到一個正確且可執行的策略。</p>
+      <div class="creds-grid">
+        <div class="cred-item" style="display:flex;align-items:center;gap:16px;">
+          <img src="assets/img/badge-wt.png" alt="World Triathlon Level 1 Certified Coach badge" style="width:64px;height:64px;border-radius:10px;flex-shrink:0;">
+          <div>
+            <div class="t" data-i18n="cred_item1_t">World Triathlon Level 1 Certified Coach</div>
+            <div class="d" data-i18n="cred_item1_d">World Triathlon 國際認證教練・2026</div>
+          </div>
+        </div>
+        <div class="cred-item" style="display:flex;align-items:center;gap:16px;">
+          <div style="width:64px;height:64px;border-radius:10px;background:var(--panel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <img src="assets/img/badge-tp.png" alt="TrainingPeaks Level 2 Coach badge" style="width:46px;height:auto;">
+          </div>
+          <div>
+            <div class="t" data-i18n="cred_item3_t">TrainingPeaks Level 2 Certified Coach</div>
+            <div class="d" data-i18n="cred_item3_d">TrainingPeaks Level 2 教練認證</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="t" data-i18n="cred_item2_t">近期比賽成績</div>
+          <div class="d" data-i18n="cred_item2_d">2024 IRONMAN 70.3 世界錦標賽完賽者<br>2025 Challenge Taiwan 226K 總冠軍<br>2025 Formosa Xtreme Triathlon 第四名<br>2026 IRONMAN Taiwan 總冠軍</div>
+        </div>
+        <div class="cred-item">
+          <div class="t" data-i18n="cred_item4_t">個人最佳成績</div>
+          <div class="d" data-i18n="cred_item4_d">70.3：4:13:06（IRONMAN 70.3 上海崇明）<br>IRONMAN：9:05:41（2025 普悠瑪鐵人賽）<br>半程馬拉松：1:17:02（2025 台北馬）<br>全程馬拉松：2:41:40（2026 台北馬）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="articles" data-hide-if-empty>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="blog_eyebrow">訓練文章</span>
+      <h2 data-i18n="blog_h2">把運動科學，拆成練得出來的方法</h2>
+      <p data-i18n="blog_sub">訓練知識、比賽紀錄與數據分析，寫給想把有限時間練在刀口上的你。</p>
+    </div>
+    <div class="teaser-grid" id="latest-posts"></div>
+    <div class="teaser-foot"><a class="text-link" href="blog/index.html" data-i18n="blog_all">看全部文章 →</a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="faq_eyebrow">常見問題</span>
+      <h2 data-i18n="faq_h2">你可能想問的</h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq0_q">楊博智教練是誰？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq0_a">楊博智（Po Chih Yang）投入鐵人三項十年，是 World Triathlon Level 1 與 TrainingPeaks Level 2 雙認證教練。從田徑成績平平起步，靠科學化週期訓練與始終如一的堅持，一路拿下 2026 IRONMAN Taiwan 總冠軍、2025 Challenge Taiwan 226K 總冠軍，並取得 2026 KONA 世界錦標賽資格。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq1_q">我沒有鐵人三項經驗，可以找你教練嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq1_a">可以。重要的是你有明確目標，並願意穩定投入訓練，不論是初次挑戰標準距離，或準備進階賽事都適合。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq2_q">我常常出差、工作時間不固定，可以配合嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq2_a">這正是教練設計的初衷。在安排訓練之前，會先了解你的工作型態與生活安排，讓計畫配合你的生活。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq3_q">課表多久會調整一次？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq3_a">每週投放下週的訓練內容，再依據你的實際狀況動態調整。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq4_q">初次諮詢是怎麼進行的？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq4_a">30~60分鐘的視訊或語音通話，讓你完全了解訓練方案的運作，聊你的目標、目前的訓練狀況，以及是否適合一起合作，沒有銷售話術。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq5_q">可以邀請你進行企業演講或工作坊嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq5_a">可以。主題可包含目標執行、時間規劃、生活健康，與長期複利表現相關，這是我可以提供且適用於任何人的價值。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq6_q">可以擔任公司或團體的運動社團教練嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq6_a">可以。方案可包含成員評估、賽事規劃、團體訓練、相關訓練知識課程等。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq7_q">只有鐵人三項才能找你當教練嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="faq7_a">不是，若你是跑者、騎士，或是正在準備跑步比賽，我們也提供單項目的訓練。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="contact-box" style="grid-template-columns:1fr;text-align:center;max-width:640px;margin:0 auto;">
+      <div class="contact-info">
+        <span class="eyebrow" data-i18n="contact_eyebrow">聯絡我</span>
+        <h2 data-i18n="contact_h2">讓我們確認是否適合合作</h2>
+        <p data-i18n="contact_p">點擊下方按鈕填寫諮詢表單，我會盡快回覆，安排一次簡短的通話。</p>
+        <a href="https://docs.google.com/forms/d/1OIfbL7VuoSGEuI7I7qRtSjhvsJowcaMKTRpmMSym7cA/edit?usp=drive_web&ouid=100801459121245555120" target="_blank" rel="noopener" class="btn" style="text-decoration:none;margin:28px 0 24px;" data-i18n="form_link">填寫諮詢表單 →</a>
+        <p style="font-size:14px;color:var(--paper-faint);">
+          <span data-i18n="contact_or">企業、社團與團體設計請直接寄信至</span>
+          <a class="contact-email" href="mailto:peakpath2026@gmail.com" data-i18n="contact_email" style="margin-left:4px;">peakpath2026@gmail.com</a>
+        </p>
+        <div class="social-row">
+          <a href="https://lin.ee/s2tEhvs" target="_blank" rel="noopener" class="social-link" aria-label="LINE">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3C6.48 3 2 6.58 2 11c0 3.95 3.58 7.26 8.42 7.9.33.07.78.22.89.5.1.26.07.66.03.92l-.14.87c-.04.26-.2 1 .87.55 1.08-.46 5.8-3.42 7.92-5.85C21.34 13.85 22 12.5 22 11c0-4.42-4.48-8-10-8z" stroke="#c69a54" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://reurl.cc/Z4OGjg" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#c69a54" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#c69a54" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="#c69a54"/></svg>
+          </a>
+          <a href="https://reurl.cc/Z4OGGg" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 8h2V4h-2c-2.21 0-4 1.79-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8c0-.55.45-1 1-1z" stroke="#c69a54" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -46,13 +427,163 @@
 
 <script>
 window.PAGE_I18N = {
-  zh: { page_title: "訓練文章｜PeakPath Coaching 峰行訓練", bl_eyebrow: "Training Insights", bl_h1: "訓練文章",
-        bl_p: "把運動科學拆成看得懂、練得出來的方法。從鐵人三項、跑步到數據分析，寫給想把有限時間練在刀口上的你。" },
-  en: { page_title: "Articles | PeakPath Coaching", bl_eyebrow: "Training Insights", bl_h1: "Articles",
-        bl_p: "Sports science, broken down into training you can understand and actually do — from triathlon and running to data analysis." }
+  zh: { 
+    hero_kicker:"PEAKPATH COACHING",
+    hero_h1:"專心訓練，放心比賽，好好生活。",
+    hero_lede:"不受時間、區域限制，打造個別化專屬的訓練計劃。",
+    hero_cta1:"預約免費教練諮詢", hero_cta2:"了解合作方式",
+    cred1:"TrainingPeaks Level 2 認證教練", cred2:"World Triathlon Level 1 認證教練", cred3:"提供中文與英文教練服務",
+    hero_img_ph:"〔教練形象照〕<br>建議放置比賽或訓練中的照片",
+    why_eyebrow:"我為什麼做教練",
+    why_h2:"十年淬鍊出的，不只是成績，是一套訓練哲學。",
+    why_intro:"我從來不是天賦型選手。能走到今天，靠的是始終如一的堅持，以及科學化、週期化的訓練方法——這是我十年來的訓練軌跡。",
+    tl1_year:"學生時期", tl1_title:"田徑起點，成績平平", tl1_desc:"大學以前練田徑，成績並不出色，也不是天賦型選手。",
+    tl2_year:"大學", tl2_title:"接觸鐵人三項，認識科學化訓練", tl2_desc:"開始接觸鐵人三項與週期化訓練觀念，第一次真正看見自己的轉變，先從奧運距離（51.5）比起。",
+    tl3_year:"2018–至今", tl3_title:"數年113淬鍊：4:44 → 4:13", tl3_desc:"發現游泳實力落差過大，大三轉戰70.3（113），沒想到一比就是六年，成績開始持續進步。",
+    tl4_year:"2024", tl4_title:"站上IM 70.3世錦賽", tl4_desc:"於紐西蘭陶泊，站上IRONMAN 70.3世界錦標賽的起跑線。",
+    tl5_year:"2023–2024", tl5_title:"挑戰226超級鐵人", tl5_desc:"2023年底跑出初馬2小時41分作為前導，隔年完成人生第一場226，成績9小時30分。",
+    tl6_year:"2025", tl6_title:"226進步到9:05，拿下雙料佳績", tl6_desc:"226最佳成績進步到9小時05分，在Challenge Taiwan 226K奪下總冠軍（9:15），同年於Formosa Xtreme Triathlon獲得第四名。",
+    tl7_year:"2026", tl7_title:"IRONMAN Taiwan奪冠，前進KONA", tl7_desc:"拿下IRONMAN Taiwan總冠軍，今年十月即將站上KONA世界錦標賽的起跑線。",
+    why_closing:"這段路讓我更確定一件事：天賦、條件從來不是關鍵，真正重要的是能否周而復始地投入、並用對的方法訓練。我的教練理念也建立在這裡——不是給你一份「看起來很厲害」的課表，而是找到一個結合科學化、週期化並且可執行的訓練規劃，幫助你在忙碌的生活裡，依然能穩定進步、走得長久。",
+    stat1_num:"10+", stat1_label:"年執教與競賽經歷",
+    stat2_num:"雙認證", stat2_label:"World Triathlon + TrainingPeaks",
+    stat3_num:"2026", stat3_label:"IRONMAN Taiwan 總冠軍",
+    stat4_num:"KONA", stat4_label:"世界錦標賽資格",
+    fit_eyebrow:"適合對象", fit_h2:"什麼樣的選手適合找 PeakPath Coaching？",
+    fit_sub:"適合在工作與生活責任之間仍堅持訓練的選手，你正需要一份能配合真實生活的訓練計畫。",
+    fit1:"有明確的比賽目標，但不知道如何把訓練放進日常生活",
+    fit2:"已經很努力訓練，卻常因疲勞或缺乏結構而無法穩定進步",
+    fit3:"想了解自己的訓練反應，而不只是照表操課",
+    fit4:"需要一位願意根據實際狀況調整課表、給予訓練更明確、俐落的教練",
+    how_eyebrow:"合作方式", how_h2:"線上鐵人三項教練是怎麼運作的？",
+    how1_h:"先了解你的生活，再安排訓練", how1_p:"先進行免費諮詢，了解你的工作時間、訓練經歷、器材與比賽目標，並完成一週的試合作訓練，再由你決定是否接續合作。諮詢過程無任何綁定、無需付費。",
+    how2_h:"課表隨你的狀態持續調整", how2_p:"透過 TrainingPeaks 檢視完成度、心率與配速，根據恢復狀況，並搭配每月線上會議，密切且動態地依生活變化調整未來的訓練安排。",
+    how3_h:"不只練體能，也準備比賽當天", how3_p:"提供競賽配速、補給、轉換區等相關實務競賽策略，減少比賽失誤、提升運動表現。",
+    tp_eyebrow:"以 TrainingPeaks 驅動", tp_h2:"數據為核心的訓練系統，更需要實務經歷判斷",
+    tp_p:"TrainingPeaks 是我用來規劃、追蹤每一份課表的系統，讓訓練不只是憑感覺。從你完成的每一次游泳、單車、跑步，到心率、配速與恢復狀態，都會回饋進下一步的調整裡。",
+    tp_f1:"課表設計 — 每份訓練都有清楚的強度、配速與心率區間，讓訓練明確不猶疑",
+    tp_f2:"動態追蹤 — 每次上傳的數據皆親自檢視並調整、給予回饋",
+    tp_f3:"長期趨勢分析 — 從每日訓練中看出整個賽季的體能變化",
+    tp_f4:"即時回饋 — 訊息文字溝通、每月視訊會議，密切聯繫訓練動向",
+    tp_profile_cta:"查看我的教練檔案", tp_profile_sub:"TrainingPeaks 官方檔案",
+    price_eyebrow:"一對一線上教練", price_h2:"從你的生活出發，設計真正能執行的訓練",
+    price_sub:"所有方案均包含 TrainingPeaks 帳號及免費初次諮詢。",
+    plan1_tag:"最受歡迎", plan1_name:"鐵人三項訓練方案", plan1_price:"NT$5,500", plan1_unit:"/ 月", plan_note:"學生價格、長期優惠方案請詳閱內文", plan1_desc:"完整鐵人三項週期化訓練，整合游泳、自行車、跑步三項規劃，適合準備標鐵、70.3 或 226 各級距離賽事的選手。",
+    plan1_f1:"個人化週期訓練計畫", plan1_f2:"每週訓練內容更新與動態調整", plan1_f3:"TrainingPeaks 數據追蹤與回饋", plan1_f4:"每月例行線上會議", plan1_f5:"比賽配速與補給策略規劃", plan_cta:"了解方案", plan_cta2:"預約方案諮詢",
+    plan2_name:"單項目訓練方案", plan2_price:"NT$4,000", plan2_desc:"游泳、自行車、跑步任單項訓練規劃，適合準備馬拉松、路跑或自行車賽事之選手。",
+    plan2_f1:"個人化週期訓練計畫", plan2_f2:"每週訓練內容更新與動態調整", plan2_f3:"TrainingPeaks 數據追蹤與回饋", plan2_f4:"每月例行線上會議", plan2_f5:"比賽配速與補給策略規劃",
+    plan3_name:"企業團體、運動社團相關", plan3_price:"另議報價", plan3_desc:"為企業、運動社團設計的主題演講、工作坊與團體訓練方案。", plan3_cta:"洽詢報價",
+    plan3_f1:"主題式講座", plan3_f2:"企業、社團工作坊、客座教練", plan3_f3:"賽事規劃、團體訓練規劃",
+    corp_eyebrow:"更多合作方式", corp_h2:"為企業、社團與團體設計的方案", corp_sub:"每一項合作都可依參與對象、人數、期間與需求進行調整。",
+    corp1_h:"企業演講與工作坊", corp1_p:"結合耐力運動與真實職涯經驗，分享能實際運用在工作與生活中的方法。",
+    corp1_l1:"目標執行與時間管理", corp1_l2:"紀律與長期穩定表現", corp1_l3:"面對挫折時的心態調整", corp1_cta:"詢問企業演講方案 →",
+    corp2_h:"企業運動社團教練", corp2_p:"協助企業建立有系統的三鐵、跑步或耐力運動社團文化。",
+    corp2_l1:"成員能力與目標評估", corp2_l2:"賽季訓練規劃", corp2_l3:"團體訓練與知識課程", corp2_cta:"討論企業社團方案 →",
+    corp3_h:"團體訓練計畫", corp3_p:"為準備相同賽事的小型團體，設計結構化訓練計畫。",
+    corp3_l1:"適合跑團、車隊、三鐵社團", corp3_l2:"共享訓練方向、依能力調整強度", corp3_l3:"賽前策略與知識課程", corp3_cta:"詢問團體訓練方案 →",
+    bio_eyebrow:"關於你的教練", bio_h2:"楊博智 Po Chih Yang",
+    bio_quote:"「對行動心急如焚，對成果耐心等待。」",
+    bio_p1:"比賽需要想像力，練習則要有理性和現實，在兩者之間需要睡覺。",
+    bio_p2:"人們想複製仙丹課表、冠軍做法，可惜的是，世界裡根本不存在所謂的SOP，人會變，經驗無法被複製，我們要做的是，找到一個正確且可執行的策略。",
+    bio_img_ph:"〔教練個人照〕",
+    cred_item1_t:"World Triathlon Level 1 Certified Coach", cred_item1_d:"World Triathlon 國際認證教練・2026",
+    cred_item2_t:"近期比賽成績", cred_item2_d:"2024 IRONMAN 70.3 世界錦標賽完賽者<br>2025 Challenge Taiwan 226K 總冠軍<br>2025 Formosa Xtreme Triathlon 第四名<br>2026 IRONMAN Taiwan 總冠軍",
+    cred_item4_t:"個人最佳成績", cred_item4_d:"70.3：4:13:06（IRONMAN 70.3 上海崇明）<br>IRONMAN：9:05:41（2025 普悠瑪鐵人賽）<br>半程馬拉松：1:17:02（2025 台北馬）<br>全程馬拉松：2:41:40（2026 台北馬）",
+    cred_item3_t:"TrainingPeaks Level 2 Certified Coach", cred_item3_d:"TrainingPeaks Level 2 教練認證",
+    faq_eyebrow:"常見問題", faq_h2:"你可能想問的",
+    faq0_q:"楊博智教練是誰？", faq0_a:"楊博智（Po Chih Yang）投入鐵人三項十年，是 World Triathlon Level 1 與 TrainingPeaks Level 2 雙認證教練。從田徑成績平平起步，靠科學化週期訓練與始終如一的堅持，一路拿下 2026 IRONMAN Taiwan 總冠軍、2025 Challenge Taiwan 226K 總冠軍，並取得 2026 KONA 世界錦標賽資格。",
+    faq1_q:"我沒有鐵人三項經驗，可以找你教練嗎？", faq1_a:"可以。重要的是你有明確目標，並願意穩定投入訓練，不論是初次挑戰標準距離，或準備進階賽事都適合。",
+    faq2_q:"我常常出差、工作時間不固定，可以配合嗎？", faq2_a:"這正是教練設計的初衷。在安排訓練之前，會先了解你的工作型態與生活安排，讓計畫配合你的生活。",
+    faq3_q:"課表多久會調整一次？", faq3_a:"每週投放下週的訓練內容，再依據你的實際狀況動態調整。",
+    faq4_q:"初次諮詢是怎麼進行的？", faq4_a:"30~60分鐘的視訊或語音通話，讓你完全了解訓練方案的運作，聊你的目標、目前的訓練狀況，以及是否適合一起合作，沒有銷售話術。",
+    faq5_q:"可以邀請你進行企業演講或工作坊嗎？", faq5_a:"可以。主題可包含目標執行、時間規劃、生活健康，與長期複利表現相關，這是我可以提供且適用於任何人的價值。",
+    faq6_q:"可以擔任公司或團體的運動社團教練嗎？", faq6_a:"可以。方案可包含成員評估、賽事規劃、團體訓練、相關訓練知識課程等。",
+    faq7_q:"只有鐵人三項才能找你當教練嗎？", faq7_a:"不是，若你是跑者、騎士，或是正在準備跑步比賽，我們也提供單項目的訓練。",
+    contact_eyebrow:"聯絡我", contact_h2:"讓我們確認是否適合合作", contact_p:"點擊下方按鈕填寫諮詢表單，我會盡快回覆，安排一次簡短的通話。", contact_or:"企業、社團與團體設計請直接寄信至",
+    contact_email:"peakpath2026@gmail.com",
+    form_link:"填寫諮詢表單 →", 
+  },
+  en: { 
+    hero_kicker:"PEAKPATH COACHING",
+    hero_h1:"Train with focus. Race with confidence. Live well.",
+    hero_lede:"Personalized training plans, built around you — not limited by time zone or location.",
+    hero_cta1:"Book a Free Consultation", hero_cta2:"How We Work Together",
+    cred1:"TrainingPeaks Level 2 Certified Coach", cred2:"World Triathlon Level 1 Certified Coach", cred3:"Coaching available in Chinese and English",
+    hero_img_ph:"[Coach portrait]<br>Suggested: a race day or training photo",
+    why_eyebrow:"Why I Coach",
+    why_h2:"Ten years didn't just build my results — it built a training philosophy.",
+    why_intro:"I was never the naturally gifted athlete. What got me here was consistency, and a science-based, periodized approach to training — here's what that decade looked like.",
+    tl1_year:"Before College", tl1_title:"Started in track, without much success", tl1_desc:"I ran track before college, without standout results — never the naturally talented athlete.",
+    tl2_year:"University", tl2_title:"Discovered triathlon and periodized training", tl2_desc:"Started triathlon and periodized training, and saw real change for the first time — beginning with Olympic-distance racing.",
+    tl3_year:"2018–Present", tl3_title:"Years at 70.3: 4:44 → 4:13", tl3_desc:"Realized my swim was holding me back and moved up to 70.3 in my junior year — what began as one race turned into six years of steady improvement.",
+    tl4_year:"2024", tl4_title:"IRONMAN 70.3 World Championship", tl4_desc:"Lined up at the IRONMAN 70.3 World Championship in Taupō, New Zealand.",
+    tl5_year:"2023–2024", tl5_title:"Moved up to full-distance IRONMAN", tl5_desc:"Ran a 2:41 debut marathon in late 2023 to prepare, then finished my first full IRONMAN in 9:30 the following year.",
+    tl6_year:"2025", tl6_title:"9:05 PR, plus two major results", tl6_desc:"Brought my IRONMAN time down to 9:05, won Challenge Taiwan 226K outright in 9:15, and placed 4th at Formosa Xtreme Triathlon.",
+    tl7_year:"2026", tl7_title:"IRONMAN Taiwan champion, on to Kona", tl7_desc:"Won IRONMAN Taiwan outright, and this October I'll be racing at the World Championship in Kona.",
+    why_closing:"That journey taught me something I still hold onto: talent and circumstances were never the deciding factor — what matters is showing up consistently and training the right way. That's the foundation of my coaching philosophy too: not a plan that just looks impressive on paper, but a science-based, periodized, and genuinely executable training plan that helps you keep improving steadily, even with a busy life.",
+    stat1_num:"10+", stat1_label:"Years Coaching & Racing",
+    stat2_num:"Dual Certified", stat2_label:"World Triathlon + TrainingPeaks",
+    stat3_num:"2026", stat3_label:"IRONMAN Taiwan Champion",
+    stat4_num:"KONA", stat4_label:"World Championship Qualifier",
+    fit_eyebrow:"Who This Is For", fit_h2:"Who is PeakPath Coaching a good fit for?",
+    fit_sub:"For athletes balancing serious training with a demanding job and life — you already know you need a plan built around real life.",
+    fit1:"You have a clear race goal but aren't sure how to fit training into daily life",
+    fit2:"You train hard but keep stalling out from fatigue or lack of structure",
+    fit3:"You want to understand your own training response — not just follow a schedule",
+    fit4:"You want a coach who adjusts the plan based on real feedback and keeps your training clear and focused",
+    how_eyebrow:"How We Work Together", how_h2:"How does online triathlon coaching work?",
+    how1_h:"Your life comes first, then the plan", how1_p:"We start with a free consultation covering your work schedule, training history, equipment, and race goals, followed by a one-week trial before you decide whether to continue. No commitment, no cost.",
+    how2_h:"Your plan adapts as you go", how2_p:"I review your completed workouts, heart rate, and pace through TrainingPeaks, and pair that with a monthly check-in call — adjusting your training closely and dynamically as your life and recovery change.",
+    how3_h:"Training the body — and race-day decisions", how3_p:"I help you plan race-day pacing, fueling, and transitions, reducing mistakes on the day and helping you perform at your best.",
+    tp_eyebrow:"Powered by TrainingPeaks", tp_h2:"A data-driven system — backed by real-world judgment",
+    tp_p:"TrainingPeaks is the system I use to plan and track every workout, so training isn't just guesswork. Every swim, ride, and run you log — along with heart rate, pace, and recovery — feeds directly into what comes next.",
+    tp_f1:"Workout design — every session has a clear intensity, pace, and heart rate range, so there's never any guesswork",
+    tp_f2:"Ongoing tracking — every upload is personally reviewed, adjusted, and followed up with feedback",
+    tp_f3:"Long-term trends — daily training data reveals how your fitness shifts across a full season",
+    tp_f4:"Direct feedback — message check-ins plus a monthly video call, so we stay closely aligned on where training is headed",
+    tp_profile_cta:"View My Coach Profile", tp_profile_sub:"Official TrainingPeaks Profile",
+    price_eyebrow:"1:1 Online Coaching", price_h2:"Training built from your real life",
+    price_sub:"All plans include a TrainingPeaks account and a free intro call.",
+    plan1_tag:"Most Popular", plan1_name:"Triathlon Training Plan", plan1_price:"NT$5,500", plan1_unit:"/ month", plan_note:"Student pricing and long-term discounts — see below", plan1_desc:"Full periodized triathlon coaching across swim, bike, and run — for athletes preparing for sprint, 70.3, or full-distance (226) races.",
+    plan1_f1:"Personalized periodized training plan", plan1_f2:"Weekly training updates with dynamic adjustment", plan1_f3:"TrainingPeaks data tracking and feedback", plan1_f4:"Monthly video check-in", plan1_f5:"Race pacing and fueling strategy", plan_cta:"Learn More", plan_cta2:"Book a Consult",
+    plan2_name:"Single-Sport Training Plan", plan2_price:"NT$4,000", plan2_desc:"Single-sport coaching for swim, bike, or run — for athletes preparing for a marathon, road race, or cycling event.",
+    plan2_f1:"Personalized periodized training plan", plan2_f2:"Weekly training updates with dynamic adjustment", plan2_f3:"TrainingPeaks data tracking and feedback", plan2_f4:"Monthly video check-in", plan2_f5:"Race pacing and fueling strategy",
+    plan3_name:"Corporate & Sports Club Programs", plan3_price:"Custom Quote", plan3_desc:"Talks, workshops, and group training programs designed for companies and sports clubs.", plan3_cta:"Request a Quote",
+    plan3_f1:"Themed talks", plan3_f2:"Corporate/club workshops, guest coaching", plan3_f3:"Race and group training planning",
+    corp_eyebrow:"More Ways to Work Together", corp_h2:"Programs for companies, clubs, and groups", corp_sub:"Every engagement is scoped to the audience, group size, timeline, and goals.",
+    corp1_h:"Corporate Talks & Workshops", corp1_p:"Endurance sport lessons paired with real career experience, applied to work and life.",
+    corp1_l1:"Turning big goals into consistent action", corp1_l2:"Discipline and sustained performance", corp1_l3:"Resetting after setbacks", corp1_cta:"Ask About Corporate Talks →",
+    corp2_h:"Corporate Sports Club Coaching", corp2_p:"Helping companies build a structured, sustainable triathlon or endurance sport culture.",
+    corp2_l1:"Member skill and goal assessment", corp2_l2:"Season training plan", corp2_l3:"Group sessions and knowledge workshops", corp2_cta:"Discuss a Club Program →",
+    corp3_h:"Group Training Programs", corp3_p:"Structured plans for small groups preparing for the same race.",
+    corp3_l1:"For run clubs, cycling teams, tri clubs", corp3_l2:"Shared direction, scaled to ability", corp3_l3:"Pre-race strategy sessions", corp3_cta:"Ask About Group Training →",
+    bio_eyebrow:"About Your Coach", bio_h2:"Po Chih Yang 楊博智",
+    bio_quote:"\"Urgent about taking action. Patient about the results.\"",
+    bio_p1:"Racing takes imagination. Training takes reason and realism. Between the two, you need sleep.",
+    bio_p2:"People want to copy the magic workout, the champion's formula. But there's no such thing as a universal playbook — people change, and experience can't be copied. What we're really after is finding a strategy that's both right and executable.",
+    bio_img_ph:"[Coach portrait]",
+    cred_item1_t:"World Triathlon Level 1 Certified Coach", cred_item1_d:"World Triathlon Certification · 2026",
+    cred_item2_t:"Recent Race Results", cred_item2_d:"2024 IRONMAN 70.3 World Championship Finisher<br>2025 Challenge Taiwan 226K — Overall Champion<br>2025 Formosa Xtreme Triathlon — 4th Place<br>2026 IRONMAN Taiwan — Overall Champion",
+    cred_item4_t:"Personal Best Times", cred_item4_d:"70.3: 4:13:06 (IRONMAN 70.3 Shanghai Chongming)<br>IRONMAN: 9:05:41 (2025 Puyuma Triathlon)<br>Half Marathon: 1:17:02 (2025 Taipei Marathon)<br>Marathon: 2:41:40 (2026 Taipei Marathon)",
+    cred_item3_t:"TrainingPeaks Level 2 Certified Coach", cred_item3_d:"TrainingPeaks Level 2 Coach Accreditation",
+    faq_eyebrow:"FAQ", faq_h2:"Things you might be wondering",
+    faq0_q:"Who is coach Po Chih Yang?", faq0_a:"Po Chih Yang has spent ten years in triathlon and is a dual-certified coach — World Triathlon Level 1 and TrainingPeaks Level 2. Starting from an unremarkable track career, he built his results through science-based, periodized training and sheer consistency, going on to win the 2026 IRONMAN Taiwan title, the 2025 Challenge Taiwan 226K title, and qualify for the 2026 IRONMAN World Championship in Kona.",
+    faq1_q:"I have no triathlon experience — can I still work with you?", faq1_a:"Yes. What matters most is a clear goal and consistent commitment, whether it's your first sprint or a bigger race.",
+    faq2_q:"I travel a lot and my schedule is unpredictable — can you work with that?", faq2_a:"That's exactly what this coaching is built for. Before planning anything, I learn your work pattern and life schedule first.",
+    faq3_q:"How often does the plan get adjusted?", faq3_a:"Next week's training is released each week, then adjusted dynamically based on how you're actually responding.",
+    faq4_q:"What happens on the intro call?", faq4_a:"A 30–60 minute video or voice call to walk you through exactly how the coaching program works, talk through your goals, current training, and whether we're a good fit — no sales pitch.",
+    faq5_q:"Can I book you for a corporate talk or workshop?", faq5_a:"Yes. Topics can include turning goals into action, time management, healthy living, and the compound effect of consistency — lessons that apply to anyone, not just athletes.",
+    faq6_q:"Can you coach our company or group's sports club?", faq6_a:"Yes. Programs can include member assessment, race-season planning, group training sessions, and related knowledge workshops.",
+    faq7_q:"Do I have to be a triathlete to work with you?", faq7_a:"Not at all — if you're a runner or cyclist, or training for a running race, single-sport coaching is available too.",
+    contact_eyebrow:"Contact", contact_h2:"Let's see if we're a good fit", contact_p:"Click below to fill out the consultation form, and I'll get back to you to schedule a short call.", contact_or:"For corporate, club, and group programs, email directly at",
+    contact_email:"peakpath2026@gmail.com",
+    form_link:"Fill Out the Consultation Form →", 
+  }
 };
 </script>
-<script src="../assets/posts.js"></script>
-<script src="../assets/site.js"></script>
+<script src="assets/posts.js"></script>
+<script src="assets/plans.js"></script>
+<script src="assets/site.js"></script>
+
 </body>
 </html>

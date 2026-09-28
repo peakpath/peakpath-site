@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訓練課表｜PeakPath Coaching 峰行訓練</title>
+<meta name="description" content="楊博智教練設計的鐵人三項與馬拉松訓練課表：51.5 初鐵、IRONMAN 70.3、226 超級鐵人、全程馬拉松。一次購買，直接匯入 TrainingPeaks。">
+<meta property="og:title" content="訓練課表｜PeakPath Coaching 峰行訓練">
+<meta property="og:description" content="鐵人三項與馬拉松的週期化訓練課表，直接匯入 TrainingPeaks。">
+<meta property="og:image" content="../assets/img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-root="../" data-page="plans">
+
+<header class="page-hero">
+  <div class="wrap" style="position:relative;">
+    <span class="eyebrow" data-i18n="pl_eyebrow">Training Plans</span>
+    <h1 data-i18n="pl_h1">訓練課表</h1>
+    <p data-i18n="pl_p">和一對一教練同樣的週期化邏輯，整理成一份完整、可以自己執行的課表。一次購買，直接匯入 TrainingPeaks，每天打開就知道今天要練什麼。</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="plans-grid" id="plans-list"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="hb_eyebrow">購買流程</span>
+      <h2 data-i18n="hb_h2">三個步驟，今天就能開始練</h2>
+    </div>
+    <div class="how-buy steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 data-i18n="hb1_h">選擇課表並設定比賽日</h3>
+        <p data-i18n="hb1_p">在 TrainingPeaks 完成購買，選擇你的目標比賽日期，課表會自動往前排好每一天。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 data-i18n="hb2_h">同步你的手錶或碼表</h3>
+        <p data-i18n="hb2_p">結構化課表可以同步到 Garmin、COROS、Wahoo 等裝置，練的時候跟著提示走就好。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 data-i18n="hb3_h">照著練，定期檢測</h3>
+        <p data-i18n="hb3_p">課表內建檢測課，更新你的閾值後，強度區間會跟著調整，訓練強度一直都對。</p>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="compare-row head">
+        <div></div><div data-i18n="cmp_h1">訓練課表</div><div data-i18n="cmp_h2">一對一教練</div>
+      </div>
+      <div class="compare-row">
+        <div data-i18n="cmp_r1">適合誰</div>
+        <div data-i18n="cmp_r1a" data-label="訓練課表">生活作息穩定、能自己執行課表</div>
+        <div data-i18n="cmp_r1b" data-label="一對一教練">行程多變、想要有人幫你判斷與調整</div>
+      </div>
+      <div class="compare-row">
+        <div data-i18n="cmp_r2">課表調整</div>
+        <div data-i18n="cmp_r2a" data-label="訓練課表">固定課表，可自行移動日期</div>
+        <div data-i18n="cmp_r2b" data-label="一對一教練">每週依你的狀況動態調整</div>
+      </div>
+      <div class="compare-row">
+        <div data-i18n="cmp_r3">教練回饋</div>
+        <div data-i18n="cmp_r3a" data-label="訓練課表">—</div>
+        <div data-i18n="cmp_r3b" data-label="一對一教練">數據檢視、訊息溝通、每月視訊</div>
+      </div>
+      <div class="compare-row">
+        <div data-i18n="cmp_r4">費用</div>
+        <div data-i18n="cmp_r4a" data-label="訓練課表">一次購買</div>
+        <div data-i18n="cmp_r4b" data-label="一對一教練">NT$4,000 起／月</div>
+      </div>
+    </div>
+    <p style="margin-top:28px;color:var(--paper-dim);font-size:15px;">
+      <span data-i18n="cmp_note">不確定哪一種適合你？</span>
+      <a class="text-link" href="../index.html#pricing" data-i18n="cmp_link">看一對一教練方案 →</a>
+    </p>
+  </div>
+</section>
+
+<section id="faq" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="pfaq_eyebrow">常見問題</span>
+      <h2 data-i18n="pfaq_h2">關於訓練課表</h2>
+    </div>
+    <div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="pq1">我需要付費的 TrainingPeaks 帳號嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="pa1">免費帳號就能使用購買的課表；部分功能（例如進階數據分析、提前同步未來的課表到裝置）需要 Premium 帳號，實際以 TrainingPeaks 官方說明為準。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="pq2">沒有功率計或心率帶也能練嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="pa2">可以。每堂課都有自覺強度（RPE）的描述，有裝置的話再用功率、配速或心率讓強度更精準。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="pq3">練到一半想改成一對一教練可以嗎？</span><span class="icon">+</span></div>
+        <div class="faq-a"><p data-i18n="pa3">可以，直接填寫諮詢表單告訴我你目前的進度，我會從你已經完成的訓練接著規劃。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+window.PAGE_I18N = {
+  zh: {
+    page_title: "訓練課表｜PeakPath Coaching 峰行訓練",
+    pl_eyebrow: "Training Plans", pl_h1: "訓練課表",
+    pl_p: "和一對一教練同樣的週期化邏輯，整理成一份完整、可以自己執行的課表。一次購買，直接匯入 TrainingPeaks，每天打開就知道今天要練什麼。",
+    hb_eyebrow: "購買流程", hb_h2: "三個步驟，今天就能開始練",
+    hb1_h: "選擇課表並設定比賽日", hb1_p: "在 TrainingPeaks 完成購買，選擇你的目標比賽日期，課表會自動往前排好每一天。",
+    hb2_h: "同步你的手錶或碼表", hb2_p: "結構化課表可以同步到 Garmin、COROS、Wahoo 等裝置，練的時候跟著提示走就好。",
+    hb3_h: "照著練，定期檢測", hb3_p: "課表內建檢測課，更新你的閾值後，強度區間會跟著調整，訓練強度一直都對。",
+    cmp_h1: "訓練課表", cmp_h2: "一對一教練",
+    cmp_r1: "適合誰", cmp_r1a: "生活作息穩定、能自己執行課表", cmp_r1b: "行程多變、想要有人幫你判斷與調整",
+    cmp_r2: "課表調整", cmp_r2a: "固定課表，可自行移動日期", cmp_r2b: "每週依你的狀況動態調整",
+    cmp_r3: "教練回饋", cmp_r3a: "—", cmp_r3b: "數據檢視、訊息溝通、每月視訊",
+    cmp_r4: "費用", cmp_r4a: "一次購買", cmp_r4b: "NT$4,000 起／月",
+    cmp_note: "不確定哪一種適合你？", cmp_link: "看一對一教練方案 →",
+    pfaq_eyebrow: "常見問題", pfaq_h2: "關於訓練課表",
+    pq1: "我需要付費的 TrainingPeaks 帳號嗎？", pa1: "免費帳號就能使用購買的課表；部分功能（例如進階數據分析、提前同步未來的課表到裝置）需要 Premium 帳號，實際以 TrainingPeaks 官方說明為準。",
+    pq2: "沒有功率計或心率帶也能練嗎？", pa2: "可以。每堂課都有自覺強度（RPE）的描述，有裝置的話再用功率、配速或心率讓強度更精準。",
+    pq3: "練到一半想改成一對一教練可以嗎？", pa3: "可以，直接填寫諮詢表單告訴我你目前的進度，我會從你已經完成的訓練接著規劃。"
+  },
+  en: {
+    page_title: "Training Plans | PeakPath Coaching",
+    pl_eyebrow: "Training Plans", pl_h1: "Training Plans",
+    pl_p: "The same periodized approach as my 1:1 coaching, packaged into a complete plan you can follow on your own. Buy once, load it into TrainingPeaks, and always know what today's session is.",
+    hb_eyebrow: "How It Works", hb_h2: "Three steps and you can start today",
+    hb1_h: "Pick a plan and set your race date", hb1_p: "Purchase on TrainingPeaks, choose your race date, and the plan lays out every day leading up to it.",
+    hb2_h: "Sync your watch or bike computer", hb2_p: "Structured workouts sync to Garmin, COROS, Wahoo and more — just follow the prompts.",
+    hb3_h: "Train and re-test", hb3_p: "Built-in test sessions keep your thresholds current, so your zones stay accurate.",
+    cmp_h1: "Training Plan", cmp_h2: "1:1 Coaching",
+    cmp_r1: "Best for", cmp_r1a: "Stable schedules, self-directed athletes", cmp_r1b: "Changing schedules, want expert adjustments",
+    cmp_r2: "Adjustments", cmp_r2a: "Fixed plan, move days yourself", cmp_r2b: "Adjusted weekly around you",
+    cmp_r3: "Coach feedback", cmp_r3a: "—", cmp_r3b: "Data review, messaging, monthly video call",
+    cmp_r4: "Price", cmp_r4a: "One-time purchase", cmp_r4b: "From NT$4,000 / month",
+    cmp_note: "Not sure which fits you?", cmp_link: "See 1:1 coaching plans →",
+    pfaq_eyebrow: "FAQ", pfaq_h2: "About training plans",
+    pq1: "Do I need a paid TrainingPeaks account?", pa1: "No — a free account works with purchased plans. Some features, such as advanced analytics and syncing future workouts to your device, require Premium; see TrainingPeaks for current details.",
+    pq2: "Can I use a plan without a power meter or HR strap?", pa2: "Yes. Every session includes RPE guidance; power, pace, or heart rate just make it more precise.",
+    pq3: "Can I switch to 1:1 coaching partway through?", pa3: "Yes. Fill out the consultation form with where you are, and I'll build on the training you've already done."
+  }
+};
+</script>
+<script src="../assets/plans.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
