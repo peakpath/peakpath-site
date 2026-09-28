@@ -1,0 +1,194 @@
+# Pages CMS 後台設定（https://app.pagescms.org）
+# 定義後台裡看得到哪些區塊、每個欄位叫什麼。一般不需要修改。
+
+media:
+  input: peakpath-site-v2/assets/img
+  output: /assets/img
+
+content:
+  # ---------------- 文章 ----------------
+  - name: posts
+    label: 文章
+    type: collection
+    path: peakpath-site-v2/content/posts
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, category, date, draft]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 標題
+        type: string
+        required: true
+      - name: slug
+        label: 網址名稱（英文小寫、用 - 連接）
+        description: 例如 race-fueling，文章網址會是 peakpathtw.com/blog/posts/race-fueling.html。發布後請不要再改。
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(-[a-z0-9]+)*$"
+          message: 只能用英文小寫、數字和 -，例如 race-fueling
+      - name: subtitle
+        label: 副標題
+        type: string
+      - name: category
+        label: 分類
+        type: select
+        required: true
+        default: training
+        options:
+          values:
+            - value: training
+              label: 訓練知識
+            - value: racing
+              label: 比賽紀錄
+            - value: athletes
+              label: 學員故事
+            - value: gear
+              label: 器材與數據
+            - value: podcast
+              label: Podcast 筆記
+      - name: date
+        label: 發布日期
+        type: date
+        required: true
+      - name: excerpt
+        label: 摘要
+        description: 顯示在文章列表、Google 搜尋結果與分享預覽，約 80–120 字。
+        type: text
+      - name: cover
+        label: 分享圖片（選填）
+        description: 分享到 LINE / FB 時顯示的圖片。沒放會用預設照片。
+        type: image
+      - name: toc
+        label: 顯示目錄
+        description: 文章有 3 個以上大標題時，自動在開頭產生目錄。
+        type: boolean
+        default: true
+      - name: draft
+        label: 草稿（打勾就不會出現在網站上）
+        type: boolean
+        default: false
+      - name: body
+        label: 內文
+        type: rich-text
+
+  # ---------------- 訓練課表 ----------------
+  - name: plans
+    label: 訓練課表
+    type: file
+    path: peakpath-site-v2/content/plans.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: 課表名稱
+        type: string
+        required: true
+      - name: name_en
+        label: 課表名稱（英文）
+        type: string
+      - name: level
+        label: 程度（例：入門、中階、進階）
+        type: string
+      - name: level_en
+        label: 程度（英文）
+        type: string
+      - name: for
+        label: 適合對象
+        type: text
+      - name: for_en
+        label: 適合對象（英文）
+        type: text
+      - name: weeks
+        label: 週數
+        type: number
+      - name: hours
+        label: 每週時數（例：7–10）
+        type: string
+      - name: sessions
+        label: 每週堂數（例：8–9）
+        type: string
+      - name: price
+        label: 價格（例：NT$1,800）
+        type: string
+      - name: price_en
+        label: 價格（英文頁面顯示）
+        type: string
+      - name: buyUrl
+        label: 購買連結
+        description: 貼上 TrainingPeaks 課表商店網址。留空的話，按鈕會顯示「即將推出｜LINE 搶先通知」。
+        type: string
+      - name: hidden
+        label: 暫時隱藏這份課表
+        type: boolean
+        default: false
+      - name: includes
+        label: 課表包含的內容
+        type: object
+        list: true
+        fields:
+          - name: zh
+            label: 中文
+            type: string
+          - name: en
+            label: 英文
+            type: string
+      - name: phases
+        label: 週期安排
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 階段（例：第 1–4 週）
+            type: string
+          - name: name_en
+            label: 階段（英文）
+            type: string
+          - name: desc
+            label: 說明
+            type: string
+          - name: desc_en
+            label: 說明（英文）
+            type: string
+      - name: id
+        label: 內部代號（可不填）
+        type: string
+        hidden: true
+
+  # ---------------- 網站設定 ----------------
+  - name: settings
+    label: 網站設定（聯絡連結）
+    type: file
+    path: peakpath-site-v2/content/settings.json
+    format: json
+    fields:
+      - name: formUrl
+        label: 諮詢表單連結（Google 表單）
+        description: 所有「預約諮詢」按鈕都會連到這裡。請用表單的「傳送 → 連結」取得的網址。
+        type: string
+      - name: email
+        label: 聯絡 Email
+        type: string
+      - name: line
+        label: LINE 官方帳號連結
+        type: string
+      - name: instagram
+        label: Instagram 連結
+        type: string
+      - name: facebook
+        label: Facebook 連結
+        type: string
+      - name: tpProfile
+        label: TrainingPeaks 教練檔案連結
+        description: 請用公開的教練頁面網址（別人不用登入也看得到的那個）。
+        type: string
+      - name: siteUrl
+        label: 網站網址
+        description: 用來產生 Google 搜尋用的網站地圖，通常不用改。
+        type: string
