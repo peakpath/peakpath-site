@@ -20,6 +20,10 @@ const ROOT = document.body.getAttribute("data-root") || "";
 const PAGE = document.body.getAttribute("data-page") || "home";
 const HOME = ROOT + "index.html";
 
+// 英文版開關：目前先關閉（只顯示中文、隱藏 中文/EN 切換鈕）。
+// 之後要恢復英文版，把 false 改成 true 即可，英文翻譯都還保留在下面。
+const ENABLE_EN = false;
+
 const SHARED_I18N = {
   zh: {
     brand_name: "PeakPath Coaching",
@@ -76,11 +80,11 @@ function buildNav() {
     </a>
     <ul class="nav-links">${links}</ul>
     <div class="nav-right">
-      <div class="lang-toggle">
+      ${ENABLE_EN ? `<div class="lang-toggle">
         <button id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
-      </div>
-      <a href="${SITE.formUrl}" target="_blank" rel="noopener" class="btn" data-i18n="nav_cta">預約諮詢</a>
+      </div>` : ""}
+      <a href="${SITE.formUrl}" data-link="form" class="btn" data-i18n="nav_cta">預約諮詢</a>
       <button class="menu-toggle" aria-label="Menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
     </div>
   </div>
@@ -121,6 +125,7 @@ function buildFooter() {
 /* ---------- 語言切換（記住訪客的選擇，跨頁面一致） ---------- */
 let CURRENT_LANG = "zh";
 function savedLang() {
+  if (!ENABLE_EN) return "zh";
   try { return localStorage.getItem("pp_lang") || "zh"; } catch (e) { return "zh"; }
 }
 function setLang(lang) {
@@ -294,8 +299,12 @@ function applyLinks() {
     }
     if (map[k] && map[k] !== "#") {
       a.href = map[k];
-      a.target = "_blank";
-      a.rel = "noopener";
+      if (/^https?:/.test(map[k])) {
+        a.target = "_blank";
+        a.rel = "noopener";
+      } else {
+        a.removeAttribute("target");
+      }
     }
   });
 }

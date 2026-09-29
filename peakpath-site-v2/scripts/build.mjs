@@ -49,7 +49,7 @@ function write(rel, content) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copyDir(r("assets"), path.join(OUT, "assets"));
-for (const f of ["index.html", "blog/index.html", "plans/index.html"]) {
+for (const f of ["index.html", "blog/index.html", "plans/index.html", "apply/index.html", "apply/thanks.html"]) {
   fs.mkdirSync(path.dirname(path.join(OUT, f)), { recursive: true });
   fs.copyFileSync(r(f), path.join(OUT, f));
 }
@@ -145,7 +145,7 @@ write("assets/posts.js",
 
 // ---------- 4. SEO：sitemap 與 robots ----------
 if (SITE_URL) {
-  const urls = ["/", "/blog/index.html", "/plans/index.html", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
+  const urls = ["/", "/blog/index.html", "/plans/index.html", "/apply/", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
   write("sitemap.xml",
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map(u => `  <url><loc>${SITE_URL}${u}</loc></url>`).join("\n") + "\n</urlset>\n");

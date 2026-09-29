@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預約諮詢｜PeakPath Coaching 峰行訓練</title>
+<meta name="description" content="填寫線上訓練諮詢表單，楊博智教練會親自看過你的訓練背景與目標，再與你聯繫安排。正式開始訓練才收費。">
+<meta property="og:title" content="預約諮詢｜PeakPath Coaching 峰行訓練">
+<meta property="og:description" content="填寫諮詢表單，打造你的專屬訓練計畫。正式開始訓練才收費。">
+<meta property="og:image" content="../assets/img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .apply-wrap{max-width:760px;margin:0 auto;}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;}
+  .flow div{border:1px solid var(--line);border-radius:4px;padding:16px;background:var(--ink-2);}
+  .flow b{display:block;font-family:'Fraunces',serif;color:var(--brass);font-size:14px;margin-bottom:6px;}
+  .flow span{font-size:14.5px;color:var(--paper-dim);line-height:1.5;display:block;}
+  .apply-form fieldset{border:none;margin:0;padding:48px 0;border-top:1px solid var(--line);}
+  .apply-form legend{padding:0;margin-bottom:28px;width:100%;}
+  .apply-form legend .num{font-family:'Fraunces',serif;color:var(--brass);font-size:14px;display:block;margin-bottom:6px;}
+  .apply-form legend h2{font-size:26px;}
+  .apply-form legend p{color:var(--paper-dim);font-size:15px;margin-top:8px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+  .field{margin-bottom:24px;}
+  .field > label, .field > .q{display:block;font-size:15px;color:var(--paper);margin-bottom:9px;font-weight:500;}
+  .req{color:var(--brass);margin-left:3px;}
+  .opt{color:var(--paper-faint);font-size:13px;font-weight:400;margin-left:6px;}
+  .hint{font-size:13.5px;color:var(--paper-faint);margin:-4px 0 10px;line-height:1.5;}
+  .apply-form input[type=text], .apply-form input[type=email], .apply-form input[type=tel],
+  .apply-form input[type=date], .apply-form textarea{
+    width:100%;background:var(--ink-2);border:1px solid var(--line);border-radius:3px;
+    color:var(--paper);font:inherit;font-size:15.5px;padding:12px 14px;transition:border-color .2s;
+    color-scheme:dark;
+  }
+  .apply-form textarea{min-height:110px;resize:vertical;line-height:1.6;}
+  .apply-form input:focus, .apply-form textarea:focus{outline:none;border-color:var(--brass);}
+  .choices{display:flex;flex-wrap:wrap;gap:10px;}
+  .choices label{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;font-size:15px;color:var(--paper-dim);
+    border:1px solid var(--line);border-radius:3px;padding:10px 16px;background:var(--ink-2);transition:.2s;
+  }
+  .choices label:hover{border-color:var(--paper-faint);}
+  .choices input, .agree input{width:auto;padding:0;border:0;background:none;accent-color:var(--brass);margin:0;flex-shrink:0;}
+  .choices label:has(input:checked){border-color:var(--brass);color:var(--paper);background:var(--brass-soft);}
+  .terms{
+    background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:22px 24px;
+    max-height:320px;overflow:auto;font-size:14px;color:var(--paper-dim);line-height:1.75;margin-bottom:22px;
+  }
+  .terms p{margin-bottom:10px;}
+  .terms ol{margin:4px 0 10px;padding-left:22px;}
+  .agree{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;cursor:pointer;}
+  .agree input{accent-color:var(--brass);width:18px;height:18px;margin-top:3px;flex-shrink:0;}
+  .submit-row{padding:12px 0 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
+  .submit-row .btn{font-size:16px;padding:14px 32px;}
+  .submit-row small{color:var(--paper-faint);font-size:13.5px;}
+  .form-error{color:#e39a8a;font-size:14px;display:none;}
+  .hp{position:absolute;left:-9999px;}
+  @media (max-width:720px){
+    .flow{grid-template-columns:1fr 1fr;}
+    .grid2{grid-template-columns:1fr;}
+    .apply-form fieldset{padding:40px 0;}
+  }
+</style>
+</head>
+<body data-root="../" data-page="apply">
+
+<header class="page-hero">
+  <div class="wrap" style="position:relative;">
+    <span class="eyebrow">預約諮詢</span>
+    <h1>打造你的專屬訓練計畫</h1>
+    <p>請依照目前的實際狀況填寫，我會親自看過每一份表單，再透過 LINE 或 Email 與你聯繫。表單內容不會對外公開。</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="apply-wrap">
+
+      <div class="flow">
+        <div><b>01</b><span>填寫這份表單</span></div>
+        <div><b>02</b><span>連動教練 TrainingPeaks 帳號</span></div>
+        <div><b>03</b><span>先配合訓練一週</span></div>
+        <div><b>04</b><span>覺得適合，再決定是否付費</span></div>
+      </div>
+      <p style="margin-top:16px;font-size:14px;color:var(--paper-faint);">正式開始訓練才收費，可開立收據。</p>
+
+      <form class="apply-form" name="apply" method="POST" action="/apply/thanks.html"
+            data-netlify="true" netlify-honeypot="bot-field" style="margin-top:48px;">
+        <input type="hidden" name="form-name" value="apply">
+        <p class="hp"><label>請勿填寫：<input name="bot-field"></label></p>
+
+        <!-- 01 方案 -->
+        <fieldset>
+          <legend><span class="num">01</span><h2>選擇方案</h2></legend>
+          <div class="field">
+            <span class="q">方案<span class="req">*</span></span>
+            <div class="choices">
+              <label><input type="radio" name="方案" value="成人方案" required> 成人方案</label>
+              <label><input type="radio" name="方案" value="學生方案"> 學生方案（需附學生證）</label>
+            </div>
+          </div>
+          <div class="field" data-group-required>
+            <span class="q">訓練內容<span class="req">*</span><span class="opt">可複選</span></span>
+            <div class="choices">
+              <label><input type="checkbox" name="訓練內容" value="鐵人三項"> 鐵人三項（游泳／自行車／跑步）</label>
+              <label><input type="checkbox" name="訓練內容" value="自行車"> 自行車</label>
+              <label><input type="checkbox" name="訓練內容" value="跑步"> 跑步</label>
+              <label><input type="checkbox" name="訓練內容" value="游泳"> 游泳</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 02 基本資料 -->
+        <fieldset>
+          <legend><span class="num">02</span><h2>基本資料</h2></legend>
+          <div class="grid2">
+            <div class="field"><label for="f-name">姓名<span class="req">*</span></label><input id="f-name" type="text" name="姓名" required autocomplete="name"></div>
+            <div class="field"><label for="f-email">Email<span class="req">*</span></label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
+            <div class="field"><label for="f-phone">手機<span class="req">*</span></label><input id="f-phone" type="tel" name="手機" required autocomplete="tel"></div>
+            <div class="field"><label for="f-line">LINE ID<span class="req">*</span></label><input id="f-line" type="text" name="LINE ID" required></div>
+            <div class="field"><label for="f-bday">生日<span class="req">*</span></label><input id="f-bday" type="date" name="生日" required autocomplete="bday"></div>
+            <div class="field"><label for="f-hw">身高／體重<span class="req">*</span></label><input id="f-hw" type="text" name="身高體重" required placeholder="例：172cm／65kg"></div>
+          </div>
+          <div class="field">
+            <span class="q">性別<span class="req">*</span></span>
+            <div class="choices">
+              <label><input type="radio" name="性別" value="生理男" required> 生理男</label>
+              <label><input type="radio" name="性別" value="生理女"> 生理女</label>
+            </div>
+          </div>
+          <div class="field"><label for="f-city">居住地<span class="req">*</span></label><input id="f-city" type="text" name="居住地" required placeholder="例：新竹市"></div>
+          <div class="field">
+            <span class="q">有無任何重大疾病<span class="req">*</span></span>
+            <div class="choices">
+              <label><input type="radio" name="重大疾病" value="無" required> 無</label>
+              <label><input type="radio" name="重大疾病" value="有"> 有</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 03 訓練背景 -->
+        <fieldset>
+          <legend><span class="num">03</span><h2>訓練背景與生活型態</h2><p>了解你過去的運動習慣與生活型態，才能設計真正適合你的課表。</p></legend>
+          <div class="field">
+            <span class="q">過去三個月的「每週」訓練時數<span class="req">*</span></span>
+            <div class="choices">
+              <label><input type="radio" name="每週訓練時數" value="1-5H" required> 1–5 小時</label>
+              <label><input type="radio" name="每週訓練時數" value="6-10H"> 6–10 小時</label>
+              <label><input type="radio" name="每週訓練時數" value="10-15H"> 10–15 小時</label>
+              <label><input type="radio" name="每週訓練時數" value="15-20H"> 15–20 小時</label>
+              <label><input type="radio" name="每週訓練時數" value="20H以上"> 20 小時以上</label>
+            </div>
+          </div>
+          <div class="field"><label for="f-job">職業／上班時間<span class="opt">選填</span></label><input id="f-job" type="text" name="職業與上班時間" placeholder="例：工程師，週一到五 9:00–18:00"></div>
+          <div class="field"><label for="f-week">簡單描述你一週的訓練時間與內容<span class="req">*</span></label><textarea id="f-week" name="一週訓練描述" required placeholder="例：週二晚上游泳 1 小時、週三跑步 10K、週末騎車 80–100K……"></textarea></div>
+          <div class="field">
+            <span class="q">是否執行過線上課表？<span class="req">*</span></span>
+            <div class="choices">
+              <label><input type="radio" name="執行過線上課表" value="是" required> 是</label>
+              <label><input type="radio" name="執行過線上課表" value="否"> 否</label>
+            </div>
+          </div>
+          <div class="field"><label for="f-inj-now">目前是否有運動傷害？<span class="req">*</span></label><p class="hint">沒有請填「無」</p><input id="f-inj-now" type="text" name="目前運動傷害" required></div>
+          <div class="field"><label for="f-inj-past">過去曾經的運動傷害<span class="req">*</span></label><p class="hint">沒有請填「無」</p><input id="f-inj-past" type="text" name="過去運動傷害" required></div>
+        </fieldset>
+
+        <!-- 04 裝備 -->
+        <fieldset>
+          <legend><span class="num">04</span><h2>裝備</h2></legend>
+          <div class="grid2">
+            <div class="field">
+              <span class="q">有 GPS 手錶嗎？<span class="req">*</span></span>
+              <div class="choices">
+                <label><input type="radio" name="GPS手錶" value="有" required> 有</label>
+                <label><input type="radio" name="GPS手錶" value="沒有"> 沒有</label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="q">有心率帶嗎？<span class="req">*</span></span>
+              <div class="choices">
+                <label><input type="radio" name="心率帶" value="有" required> 有</label>
+                <label><input type="radio" name="心率帶" value="沒有"> 沒有</label>
+              </div>
+            </div>
+          </div>
+          <div class="field"><label for="f-pm">自行車功率計<span class="req">*</span></label><p class="hint">有的話請寫品牌型號，沒有請填「無」</p><input id="f-pm" type="text" name="功率計" required></div>
+          <div class="field"><label for="f-trainer">固定式訓練台<span class="req">*</span></label><p class="hint">有的話請寫品牌型號，沒有請填「無」</p><input id="f-trainer" type="text" name="訓練台" required></div>
+        </fieldset>
+
+        <!-- 05 目標 -->
+        <fieldset>
+          <legend><span class="num">05</span><h2>目標與規劃</h2></legend>
+          <div class="field"><label for="f-recent">近期參加過的賽事、距離與完賽時間<span class="req">*</span></label><input id="f-recent" type="text" name="近期賽事" required placeholder="例：2026 臺東 70.3，5:12:30"></div>
+          <div class="field"><label for="f-pb">過去比賽或測驗的最佳成績<span class="req">*</span></label><p class="hint">請寫時間與日期，鐵人三項請附各分項時間；半馬、全馬、10K、5K、西進武嶺等都可以寫。完全沒有請填「無」。</p><textarea id="f-pb" name="最佳成績" required></textarea></div>
+          <div class="field"><label for="f-next">未來預計參加的賽事與距離<span class="req">*</span></label><p class="hint">還沒有請填「無」</p><input id="f-next" type="text" name="未來賽事" required></div>
+          <div class="field"><label for="f-hard">目前訓練遇到哪些困難？<span class="req">*</span></label><p class="hint">沒有請填「無」</p><textarea id="f-hard" name="訓練困難" required></textarea></div>
+          <div class="field"><label for="f-short">短期目標（一年內）<span class="opt">選填</span></label><textarea id="f-short" name="短期目標"></textarea></div>
+          <div class="field"><label for="f-long">長期目標（一年以上）<span class="req">*</span></label><textarea id="f-long" name="長期目標" required></textarea></div>
+          <div class="field"><label for="f-note">還有什麼想跟我說的<span class="opt">選填</span></label><textarea id="f-note" name="想說的話"></textarea></div>
+        </fieldset>
+
+        <!-- 06 聲明 -->
+        <fieldset>
+          <legend><span class="num">06</span><h2>特別聲明與切結</h2></legend>
+          <div class="terms">
+            <p>（一）本服務屬於線上運動課程安排，請務必依照教練指示，在安全區域內練習，並視自身能力執行訓練。如發生身體不適，應立即停止並尋求協助。</p>
+            <p>（二）如您曾發生以下病症及狀況，屬猝死高危險群，請諮詢醫師專業判斷，慎重考慮自身安全，切勿勉強執行。</p>
+            <p>（三）課程並無保險項目，請注意自身安全。</p>
+            <p>（四）身體注意事項：</p>
+            <ol type="a">
+              <li>不明原因的頭暈、胸部不適（胸悶、胸痛）、呼吸困難</li>
+              <li>突然失去知覺</li>
+              <li>高血壓（&gt;140/90 mmHg）</li>
+              <li>心臟病</li>
+              <li>腎功能異常</li>
+              <li>糖尿病</li>
+              <li>高血脂（總膽固醇 &gt;240 mg/dL）</li>
+              <li>家族心臟病史（一等親在 60 歲前發生心臟病或猝死）</li>
+              <li>癲癇</li>
+            </ol>
+            <p>（五）其他注意事項：</p>
+            <ol>
+              <li>請穿著合適之運動服裝進行訓練。</li>
+              <li>本課程無退費機制。</li>
+              <li>訓練課程內容等個人資料、數據，未經同意，不得另作其他用途。</li>
+            </ol>
+          </div>
+          <label class="agree"><input type="checkbox" name="同意聲明" value="同意，已詳閱" required> <span>我同意以上《特別聲明與切結》，並已詳閱線上課表說明。</span></label>
+        </fieldset>
+
+        <div class="submit-row">
+          <p class="form-error" id="form-error"></p>
+          <button type="submit" class="btn">送出諮詢表單 →</button>
+          <small>送出後我會親自看過，通常 2–3 天內透過 LINE 或 Email 回覆你。</small>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<script>
+window.PAGE_I18N = { zh: {}, en: {} };
+// 複選題至少要勾一個
+document.querySelector(".apply-form").addEventListener("submit", function (e) {
+  const err = document.getElementById("form-error");
+  for (const g of this.querySelectorAll("[data-group-required]")) {
+    if (!g.querySelector("input:checked")) {
+      e.preventDefault();
+      err.textContent = "請至少勾選一項「" + g.querySelector(".q").childNodes[0].textContent.trim() + "」。";
+      err.style.display = "block";
+      g.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+  }
+  err.style.display = "none";
+});
+</script>
+<script src="../assets/settings.js"></script>
+<script src="../assets/posts.js"></script>
+<script src="../assets/plans.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

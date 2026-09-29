@@ -169,8 +169,8 @@ content:
     format: json
     fields:
       - name: formUrl
-        label: 諮詢表單連結（Google 表單）
-        description: 所有「預約諮詢」按鈕都會連到這裡。請用表單的「傳送 → 連結」取得的網址。
+        label: 諮詢表單連結
+        description: 所有「預約諮詢」按鈕都會連到這裡。預設是網站內的諮詢頁 /apply/（資料會寄到你的信箱），一般不用改。
         type: string
       - name: email
         label: 聯絡 Email
