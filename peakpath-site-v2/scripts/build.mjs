@@ -57,6 +57,13 @@ for (const f of ["index.html", "blog/index.html", "plans/index.html", "apply/ind
 // ---------- 1. 網站設定 ----------
 const settings = JSON.parse(fs.readFileSync(r("content/settings.json"), "utf8"));
 const SITE_URL = (settings.siteUrl || "").replace(/\/+$/, "");
+const SHOW_PLANS = settings.showPlans === true;
+if (!SHOW_PLANS) {
+  // 課表先不上架：拿掉課表頁，舊連結轉回首頁
+  fs.rmSync(path.join(OUT, "plans"), { recursive: true, force: true });
+  write("_redirects", "/plans  /  302\n/plans/*  /  302\n");
+  console.log("  (訓練課表未開放，略過課表頁)");
+}
 write("assets/settings.js", `window.SITE_SETTINGS = ${JSON.stringify(settings, null, 2)};\n`);
 
 // ---------- 2. 課表 ----------
@@ -145,7 +152,7 @@ write("assets/posts.js",
 
 // ---------- 4. SEO：sitemap 與 robots ----------
 if (SITE_URL) {
-  const urls = ["/", "/blog/index.html", "/plans/index.html", "/apply/", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
+  const urls = ["/", "/blog/index.html", ...(SHOW_PLANS ? ["/plans/index.html"] : []), "/apply/", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
   write("sitemap.xml",
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map(u => `  <url><loc>${SITE_URL}${u}</loc></url>`).join("\n") + "\n</urlset>\n");

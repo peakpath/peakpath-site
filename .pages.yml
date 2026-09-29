@@ -188,6 +188,11 @@ content:
         label: TrainingPeaks 教練檔案連結
         description: 請用公開的教練頁面網址（別人不用登入也看得到的那個）。
         type: string
+      - name: showPlans
+        label: 在網站上顯示「訓練課表」
+        description: 課表還沒準備好時先不要勾。勾選後，導覽列、首頁區塊與課表頁都會出現。
+        type: boolean
+        default: false
       - name: siteUrl
         label: 網站網址
         description: 用來產生 Google 搜尋用的網站地圖，通常不用改。

@@ -12,8 +12,11 @@ const SITE = Object.assign({
   line: "#",
   instagram: "#",
   facebook: "#",
-  tpProfile: "#"
+  tpProfile: "#",
+  showPlans: false
 }, window.SITE_SETTINGS || {});
+// 「訓練課表」開關：由後台「網站設定」的「在網站上顯示訓練課表」控制
+const SHOW_PLANS = SITE.showPlans === true;
 
 // 每個頁面的 <body data-root="..."> 告訴程式網站根目錄在哪
 const ROOT = document.body.getAttribute("data-root") || "";
@@ -66,7 +69,7 @@ function buildNav() {
     ["plans", "nav_plans", "plans"],
     ["blog", "nav_blog", "blog"],
     ["#faq", "nav_faq", "faq"]
-  ];
+  ].filter(([t]) => SHOW_PLANS || t !== "plans");
   const links = items.map(([t, k, id]) =>
     `<li><a href="${navHref(t)}" data-i18n="${k}" class="${PAGE === id ? "active" : ""}"></a></li>`).join("");
   const mobile = items.concat([["#contact", "nav_contact", "contact"]]).map(([t, k]) =>
@@ -107,7 +110,7 @@ function buildFooter() {
       <div class="foot-links">
         <a href="${navHref("#about")}" data-i18n="nav_about"></a>
         <a href="${navHref("#pricing")}" data-i18n="nav_pricing"></a>
-        <a href="${navHref("plans")}" data-i18n="nav_plans"></a>
+        ${SHOW_PLANS ? `<a href="${navHref("plans")}" data-i18n="nav_plans"></a>` : ""}
         <a href="${navHref("blog")}" data-i18n="nav_blog"></a>
         <a href="${navHref("#services")}" data-i18n="nav_services"></a>
         <a href="${navHref("#faq")}" data-i18n="nav_faq"></a>
@@ -320,6 +323,7 @@ function renderDynamic() {
 }
 buildNav();
 buildFooter();
+if (!SHOW_PLANS) document.querySelectorAll("[data-plans-only]").forEach(el => el.remove());
 try { const c = new URLSearchParams(location.search).get("cat"); if (c) ACTIVE_CAT = c; } catch (e) {}
 document.addEventListener("langchange", renderDynamic);
 setLang(savedLang());
