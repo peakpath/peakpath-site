@@ -45,14 +45,10 @@ content:
           values:
             - value: training
               label: 訓練知識
-            - value: racing
-              label: 比賽紀錄
-            - value: athletes
-              label: 學員故事
+            - value: personal
+              label: 個人記錄
             - value: gear
               label: 器材與數據
-            - value: podcast
-              label: Podcast 筆記
       - name: date
         label: 發布日期
         type: date

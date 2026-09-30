@@ -15,10 +15,8 @@ const r = (...p) => path.join(ROOT, ...p);
 
 const CATEGORIES = [
   { id: "training", zh: "訓練知識", en: "Training" },
-  { id: "racing", zh: "比賽紀錄", en: "Race Reports" },
-  { id: "athletes", zh: "學員故事", en: "Athlete Stories" },
-  { id: "gear", zh: "器材與數據", en: "Gear & Data" },
-  { id: "podcast", zh: "Podcast 筆記", en: "Podcast Notes" }
+  { id: "personal", zh: "個人記錄", en: "Personal Log" },
+  { id: "gear", zh: "器材與數據", en: "Gear & Data" }
 ];
 
 const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
