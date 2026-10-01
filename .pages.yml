@@ -43,12 +43,14 @@ content:
         default: training
         options:
           values:
-            - value: training
-              label: 訓練知識
-            - value: personal
-              label: 個人記錄
             - value: gear
               label: 器材與數據
+            - value: racing
+              label: 賽事記錄
+            - value: training-log
+              label: 訓練記錄
+            - value: training
+              label: 訓練知識
       - name: date
         label: 發布日期
         type: date
