@@ -21,7 +21,7 @@ const SHOW_PLANS = SITE.showPlans === true;
 // 每個頁面的 <body data-root="..."> 告訴程式網站根目錄在哪
 const ROOT = document.body.getAttribute("data-root") || "";
 const PAGE = document.body.getAttribute("data-page") || "home";
-const HOME = ROOT + "index.html";
+const HOME = ROOT + "about/index.html"; // 原首頁搬到 /about/，網址根目錄直接進預約表單
 
 // 英文版開關：目前先關閉（只顯示中文、隱藏 中文/EN 切換鈕）。
 // 之後要恢復英文版，把 false 改成 true 即可，英文翻譯都還保留在下面。

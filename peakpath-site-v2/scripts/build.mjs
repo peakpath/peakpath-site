@@ -48,9 +48,23 @@ function write(rel, content) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copyDir(r("assets"), path.join(OUT, "assets"));
-for (const f of ["index.html", "blog/index.html", "plans/index.html", "apply/index.html", "apply/thanks.html"]) {
+// 首頁設定：打開網站先進預約表單（/apply/），原本的首頁放在 /about/
+// 之後想改回原本首頁當入口，把 FORM_FIRST 改成 false
+const FORM_FIRST = true;
+for (const f of [FORM_FIRST ? null : "index.html", "blog/index.html", "plans/index.html", "apply/index.html", "apply/thanks.html"]) {
+  if (!f) continue;
   fs.mkdirSync(path.dirname(path.join(OUT, f)), { recursive: true });
   fs.copyFileSync(r(f), path.join(OUT, f));
+}
+const redirects = [];
+if (FORM_FIRST) {
+  // 原首頁搬到 about/：相對路徑多一層 ../
+  const home = fs.readFileSync(r("index.html"), "utf8")
+    .replace('data-root=""', 'data-root="../"')
+    .replace(/(href|src|content)="(assets|blog|plans|apply)\//g, '$1="../$2/');
+  write("about/index.html", home);
+  write("index.html", '<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=/apply/"><link rel="canonical" href="/apply/"><title>峰行訓練｜PeakPath Coaching</title></head><body><a href="/apply/">前往預約諮詢</a></body></html>\n');
+  redirects.push("/  /apply/  302!", "/index.html  /apply/  302!");
 }
 
 // ---------- 1. 網站設定 ----------
@@ -60,9 +74,10 @@ const SHOW_PLANS = settings.showPlans === true;
 if (!SHOW_PLANS) {
   // 課表先不上架：拿掉課表頁，舊連結轉回首頁
   fs.rmSync(path.join(OUT, "plans"), { recursive: true, force: true });
-  write("_redirects", "/plans  /  302\n/plans/*  /  302\n");
+  redirects.push(`/plans  ${FORM_FIRST ? "/about/" : "/"}  302`, `/plans/*  ${FORM_FIRST ? "/about/" : "/"}  302`);
   console.log("  (訓練課表未開放，略過課表頁)");
 }
+if (redirects.length) write("_redirects", redirects.join("\n") + "\n");
 write("assets/settings.js", `window.SITE_SETTINGS = ${JSON.stringify(settings, null, 2)};\n`);
 
 // ---------- 2. 課表 ----------
@@ -151,7 +166,7 @@ write("assets/posts.js",
 
 // ---------- 4. SEO：sitemap 與 robots ----------
 if (SITE_URL) {
-  const urls = ["/", "/blog/index.html", ...(SHOW_PLANS ? ["/plans/index.html"] : []), "/apply/", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
+  const urls = [...(FORM_FIRST ? ["/about/"] : ["/"]), "/blog/index.html", ...(SHOW_PLANS ? ["/plans/index.html"] : []), "/apply/", ...posts.map(p => `/blog/posts/${p.slug}.html`)];
   write("sitemap.xml",
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map(u => `  <url><loc>${SITE_URL}${u}</loc></url>`).join("\n") + "\n</urlset>\n");
