@@ -1,5 +1,127 @@
 [
   {
+    "id": "half-marathon-12w",
+    "name": "初半馬完賽｜21 公里 12 週",
+    "name_en": "First Half Marathon — 21K, 12 Weeks",
+    "level": "入門",
+    "level_en": "Beginner",
+    "for": "已經有跑步習慣、能連續跑 5 公里，想在有結構的規劃下，安全、有信心地完成人生第一場半程馬拉松。",
+    "for_en": "You already run regularly and can run 5K non-stop, and want a structured plan to finish your first half marathon safely and confidently.",
+    "weeks": 12,
+    "hours": "2–4.5",
+    "sessions": "5–6",
+    "price": "US$30",
+    "price_en": "US$30",
+    "buyUrl": "https://www.trainingpeaks.com/training-plans/running/half-marathon/tp-662109/21",
+    "includes": [
+      {
+        "zh": "每週 4 次跑步，全部以閾值配速百分比設定，自動換算成你的個人配速",
+        "en": "4 runs a week, all set as % of threshold pace and converted to your own paces"
+      },
+      {
+        "zh": "第 1、8 週 5 公里配速測驗，設定並更新你的配速區間",
+        "en": "5K pace tests in weeks 1 and 8 to set and update your zones"
+      },
+      {
+        "zh": "第 1–11 週肌力訓練，附動作示範影片與中文說明",
+        "en": "Strength training in weeks 1–11 with demo videos"
+      },
+      {
+        "zh": "跑前動態暖身、肌力課活動度熱身與長跑後伸展",
+        "en": "Dynamic warm-ups, mobility prep, and post-long-run stretching"
+      },
+      {
+        "zh": "每週階段說明、裝備選用清單與賽前通知事項",
+        "en": "Weekly phase notes, gear checklist, and race-week briefing"
+      }
+    ],
+    "phases": [
+      {
+        "name": "第 1–4 週",
+        "name_en": "Weeks 1–4",
+        "desc": "基礎期：建立規律練跑與有氧基礎，第 4 週減量",
+        "desc_en": "Base: consistent running and aerobic base, recovery in week 4"
+      },
+      {
+        "name": "第 5–8 週",
+        "name_en": "Weeks 5–8",
+        "desc": "進展期：加入節奏跑，拉長週末長跑",
+        "desc_en": "Build: tempo runs and longer weekend runs"
+      },
+      {
+        "name": "第 9–10 週",
+        "name_en": "Weeks 9–10",
+        "desc": "巔峰期：最長距離與比賽配速練習",
+        "desc_en": "Peak: longest runs and race-pace work"
+      },
+      {
+        "name": "第 11–12 週",
+        "name_en": "Weeks 11–12",
+        "desc": "減量與比賽週：保持狀態，帶著新鮮的腿上場",
+        "desc_en": "Taper & race week: stay sharp, race on fresh legs"
+      }
+    ]
+  },
+  {
+    "id": "5k-speed-8w",
+    "name": "5 公里速度挑戰｜8 週",
+    "name_en": "5K Speed Challenge — 8 Weeks",
+    "level": "中階",
+    "level_en": "Intermediate",
+    "for": "已經能跑完 5 公里，想突破個人最佳成績，或成績停滯、想加入有系統的速度訓練。",
+    "for_en": "You can already run 5K and want to set a new personal best with structured speed work.",
+    "weeks": 8,
+    "hours": "2.5–4",
+    "sessions": "4",
+    "price": "US$30",
+    "price_en": "US$30",
+    "buyUrl": "https://www.trainingpeaks.com/training-plans/running/5km/tp-701520/5-8",
+    "includes": [
+      {
+        "zh": "每週 4 跑：間歇、節奏或閾值、輕鬆跑＋加速跑、長跑",
+        "en": "4 runs a week: intervals, tempo/threshold, easy + strides, long run"
+      },
+      {
+        "zh": "5K 配速、閾值與最大攝氧間歇，全部以閾值配速百分比設定",
+        "en": "5K-pace, threshold, and VO2max work, all set as % of threshold pace"
+      },
+      {
+        "zh": "第 1 週起點測驗、第 8 週速度挑戰，前後對照看見進步",
+        "en": "Baseline test in week 1 and 5K challenge in week 8 to measure progress"
+      },
+      {
+        "zh": "每堂課附中文說明與教練提醒，每週附階段說明",
+        "en": "Every session includes notes and coaching cues, plus weekly phase notes"
+      }
+    ],
+    "phases": [
+      {
+        "name": "第 1–3 週",
+        "name_en": "Weeks 1–3",
+        "desc": "基礎期：5K 配速間歇與節奏跑，熟悉目標配速",
+        "desc_en": "Base: 5K-pace intervals and tempo, learn your goal pace"
+      },
+      {
+        "name": "第 4 週",
+        "name_en": "Week 4",
+        "desc": "恢復週：降低強度，吸收前三週的訓練",
+        "desc_en": "Recovery: lower intensity to absorb training"
+      },
+      {
+        "name": "第 5–7 週",
+        "name_en": "Weeks 5–7",
+        "desc": "強化期：最大攝氧間歇、閾值拉長與比賽模擬",
+        "desc_en": "Build: VO2max, longer threshold, and race simulation"
+      },
+      {
+        "name": "第 8 週",
+        "name_en": "Week 8",
+        "desc": "比賽週：減量後挑戰新的個人最佳",
+        "desc_en": "Race week: taper, then chase a new PB"
+      }
+    ]
+  },
+  {
     "name": "初鐵完賽｜51.5 標準距離 12 週",
     "name_en": "First Triathlon — Olympic Distance, 12 Weeks",
     "level": "入門",
@@ -50,7 +172,8 @@
         "desc": "巔峰與減量：模擬比賽，帶著新鮮的腿上場",
         "desc_en": "Peak & taper: race simulation, fresh legs"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "name": "IRONMAN 70.3｜113 公里 16 週",
@@ -109,7 +232,8 @@
         "desc": "減量期：保持強度、降低總量",
         "desc_en": "Taper: keep intensity, cut volume"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "name": "IRONMAN 226｜超級鐵人 20 週",
@@ -168,7 +292,8 @@
         "desc": "減量期：三週漸進減量，比賽日滿血出發",
         "desc_en": "Taper: three-week taper into race day"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "name": "全程馬拉松｜16 週",
@@ -221,6 +346,7 @@
         "desc": "減量期：降低跑量、維持節奏感",
         "desc_en": "Taper: lower mileage, keep sharpness"
       }
-    ]
+    ],
+    "hidden": true
   }
 ]
